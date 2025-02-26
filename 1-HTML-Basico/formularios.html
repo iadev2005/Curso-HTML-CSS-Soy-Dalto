@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- Etiqueta de bloque que construye un formulario -->
+    <!-- El form recopila todos estos inputs y los envía a un servidor -->
+    <!-- required obliga al usuario a llnar el input-->
+    <!-- name le da un identificador al dato que mandamos al servidor -->
+    <!-- placeholder es un texto que ayuda al usuario a identificar que debe ingresar en el input -->
+    <!-- value es el valor predeterminado de name, se pone automáticamente en el input, por defecto es una cadena vacía -->
+    <!-- minlength establece el mínimo de carácteres que debe llevar la cadena enviada -->
+    <form>
+        <!-- Pide el dato junto con su tipo -->
+        <input type="text" required name="username" placeholder="Ingrese su usuario"> <!-- Pide un texto -->
+        <input type="email" required> <!-- Pide un email -->
+        <input type="password"> <!-- Pide una contraseña -->
+        <input type="checkbox"> <!-- Pide marcar un checkbox-->
+        <input type="radio"> <!-- Es como un checkbox pero se puede elegir uno u otro-->
+        <input type="file"> <!-- Pide un archivo -->
+        <input type="color"> <!-- Pide un color-->
+        <input type="date" required> <!-- Pide una fecha -->
+        <input type="submit" value="Enviar"> <!-- Manda un valor -->
+    </form>
+</body>
+</html>
