@@ -1,0 +1,36 @@
+p {
+    color: red;
+    /* font-family: sans-serif; */
+    /* Un caso interesante:+ es cuando la tipografía tiene espacios en blanco */
+    font-family: 'Lucida Sans', tahoma;
+    /* Con la coma, nos aseguramos de que si el navegador no soporta la primera pase a la segunda */
+    /* Por defecto es de 16px */
+    font-size: 13px;
+    /* Esto es otra forma de poner algo en negrita, lo recomendable es usar la etiqueta strong para que Google le de importancia */
+    font-weight: bold;
+    /* bolder simplemente es un escalón más arriba que bold */
+    /* Font style curvea la tipografía */
+    font-style: italic;
+    /* Justifica el texto */
+    text-align: justify;
+    /*Nota: Si es un elemento de bloque buscará el espacio del bloque y dependiendo del valor de la propiedad tomará una posición diferente, si es un elemento de línea no tendra espacio por lo tanto no se movería */
+    text-decoration: underline;
+    /* Espacio entre líneas */
+    line-height: 1;
+    /* Espacio entre letras */
+    letter-spacing: 1px;
+    /* Transforma todo el texto según el valor de la propiedad */
+    text-transform: capitalize;
+    /* Hace efectos de sombra (No recomendable) */
+    text-shadow: 0px 0px 4px #f99;
+}
+
+/* Elimina el subrayado a la "a" */
+a {
+    text-decoration: none;
+}
+
+span {
+    text-decoration: line-through;
+    color: blue;
+}

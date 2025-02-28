@@ -1,0 +1,9 @@
+input {
+    width: 80%; /*Ocupa el 80% de la caja contenedora */
+}
+
+/* Width y Height determinan el ancho y el alto del elemento, y si estamos dentro de otro elemento y le damos valores en porcentaje, el porcentaje es repecto a la caja que lo contiene */
+
+form {
+    width: 400px;
+}

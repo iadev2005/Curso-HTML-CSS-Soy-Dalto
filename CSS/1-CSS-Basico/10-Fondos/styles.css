@@ -1,0 +1,47 @@
+body {
+    background-color: #000;
+    font-family: sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.box {
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    background-color: #000;
+    background-image: url("https://wallpapers.com/images/high/head-bowed-messi-4k-ultra-hd-kwp7nqkpi497uxr8.webp");
+    background-size: 100%; /* Crece como el tamaño del elemento */
+    /* Obliga a que la imagen entre */
+    background-size: contain; /* Al menos una vez entera */
+}
+
+.box-no-repeat {
+    /* La imagen entre completa en el contenedor (se adapta), puede que no se muestre completa */
+    background-size: cover;
+    background-position: center;
+}
+
+.box-fixed {
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.opaco {
+    height: 100%;
+    width: 100%;
+    background-color: #000a;
+}
+
+h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Esta es la forma simplificada, primero nos pide la imagen, luego la posición, luego el size, luego un repeat (si lo hay), luego el attachment y por último el color (entre position y size siempre va una barra) */
+/* Fundamental poner el position */
+.box-simplified {
+    width: 100%;
+    background: url("https://c4.wallpaperflare.com/wallpaper/995/169/179/messi-images-for-desktop-background-wallpaper-preview.jpg") center / cover fixed;
+}

@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* Para hacer que las clases compartan propiedades */
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: 22px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.card {
+    background: coral;
+    text-align: center;
+    width: 300px;
+    /* El margin auto centra horizontalmente en base al contenedor */
+    margin: auto;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 9px;
+    padding: 20px;
+    background: lightcoral;
+    text-align: justify;
+}

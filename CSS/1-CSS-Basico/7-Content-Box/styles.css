@@ -1,0 +1,31 @@
+/* Imagina una caja, con contenido, padding, bordes y margen. Si le pidieras al navegador calcular las medidas de la caja el navegador tendría todas estas propiedades en cuentas (inclusive el margen), el resultado total son las medidas de tu caja, a esto se le conoce como Content-Box */
+
+/* Luego apareció una nueva forma de medirlo, que toma de base el borde para saber cuales son los extremos de la caja, y con essto determinar sus medidas, a esto de le llama el Border-Box ya que llega hasta el borde e ignora el margin */
+
+body {
+    margin: 0px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 10px
+}
+
+/* Al ser el modelo tradicional la caja no mide 100px x 100px, sino que al agregar el padding y el border aumento a 170px x 170 px */
+
+/* El contenido mide 100px x 100px, luego le agregaste un pading de 25px, y le sumas lo que le pusiste del borde */
+
+.box-default {
+    padding: 25px;
+    border: 10px solid black;
+}
+
+/* Ahora el padding y el borde forman parte del tamaño total, por lo tanto se ajustan las medidaes originales y ya no es width: 100 y height: 100, sino que disminuyen para que se ajuste */
+
+.box-new {
+    box-sizing: border-box;
+    padding: 25px;
+    border: 10px solid black;
+}

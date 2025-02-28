@@ -1,0 +1,61 @@
+h1 {
+    font-family: montserrat-importada;
+    text-align: center;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: montserrat-importada;;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: montserrat-importada;;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: montserrat-importada;;
+    font-weight: 100;
+}
+
+
+p {
+    /* Primera forma para importar la fuente (es correcta, pero hay una mejor */
+    /* font-family: montserrat; */
+    font-family: montserrat-importada;
+    /*Ahora dependiendo del font-weight cambiamos a una o a otra */
+    font-weight: 400;
+}
+
+/* Segunda forma, la podemos considerar la más profesional */
+@font-face {
+    font-family: montserrat-importada;
+    src: url("fonts/Montserrat-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+}
+
+
+@font-face {
+    font-family: montserrat-importada;
+    src: url("fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: montserrat-importada;
+    src: url("fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: montserrat-importada;
+    src: url("fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: montserrat-importada;
+    src: url("fonts/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900;
+}

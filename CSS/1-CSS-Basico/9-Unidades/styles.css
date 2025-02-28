@@ -1,0 +1,61 @@
+div {
+    background: #ededed;
+    padding: 20px;
+    font-family: sans-serif;
+    border-left: 5px solid #999;
+    margin: 10px 0;
+    /* Tampaño de todas las fuentes dentro del div */
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+span {
+    color: #999;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+p {
+    color: #555;
+}
+
+/* Podemos usar casi cualquier unidad real como cm, in, etc. Esto suele ser para las impresoras, planos, o cualquier cosa que vaya a ser llevada al plano real */
+
+.notificacion-unidad-real {
+    padding: 4cm;
+}
+
+/* Las unidades relativas son aquellas que dependen de otra cosa, como un contenedor por ejemplo */
+
+.notificacion-relativa p {
+    width: 50%;
+}
+
+/* NOTA: No es recomendable usar unidades drelativas para el tamaño de las fuentes */
+
+/* Si no hay un elemento padre, el font-size pasa a buscar el siguiente */
+
+.notificacion-em p {
+    /* Multiplica el font-size del padre por el valor que le estemos dando en este caso 14px x 2 = 18px */
+    font-size: 2em;
+}
+
+
+html {
+    font-size: 40px;
+}
+
+.notificacion-rem p {
+    /* Es lo mismo que em, solo que en vez de buscar al elemento padre busca al elemento raiz, en este caso html */
+    font-size: 1.5em;
+}
+
+/* vh (alto) es para el viewport disponible de la ventana (son utiles para los modals) y vw para el ancho */
+
+.notificacion-vh {
+    height: 50vh;
+}

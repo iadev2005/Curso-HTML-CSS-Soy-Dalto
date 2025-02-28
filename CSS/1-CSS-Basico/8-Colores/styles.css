@@ -1,0 +1,30 @@
+.box {
+    padding: 20 px50px;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    margin-left: 150px;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* 1era forma de dar color (RGB) */
+.box-rgb {
+    background: rgb(255, 255, 0);
+}
+
+/* 2da forma hexadecimal (lo mismo pero hexadecimal) */
+.box-hex {
+    background: #00ff00;
+}
+
+/* 3era forma hsl (Consultar esquema) */
+.box-hsl {
+    background: hsl(210, 40%, 85%);
+    color: hsl(210, 40%, 35%);
+    border-top: 2px solid hsl(210, 40%, 35%);
+}
+
+

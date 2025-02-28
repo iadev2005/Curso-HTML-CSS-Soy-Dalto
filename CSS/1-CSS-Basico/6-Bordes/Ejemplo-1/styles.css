@@ -1,0 +1,44 @@
+div {
+    background: red;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    /* Todas estas propiedades se pueden asignar de una forma más sencilla */
+    /* border-width: 5px;
+    border-color: black;
+    border-style: solid; */
+    
+    /* Tamaño, estilo y color */
+    border: 5px solid black;
+
+    /* También podemos definir lados específicos del borde, con (top, right, bottom y left) border-dirección-propiedad */
+
+    /* Ahora, específicamente para la propiedad radius, se puede definir en que esquina se quiere hacer el radios */
+
+    /* border-top-left-radius: 20px; */
+
+    /* Una forma fácil de trabajar con las esquinas es usando el sistema de las agujas del reloj (de arriba a la izquierda hasta abajo a la derecha) */
+    
+    /* border-radius: 10px 50px 30px 20px; */
+
+    /* Por lo general solid y el por defecto son los únicos border style que seutilizan */
+    /* Esto son una reporonga */
+    /* border-style: dashed;
+    border-style: double;
+    border-style: groove;
+    border-style: dotted;
+    border-style: hidden; */
+    /* border-radius: 5px; */
+    /* Es muy diferente redondear con píxeles y con porcentajes */
+}
+
+/* Cuadrado con semicírculos */
+.radio_pixeles {
+    /* Es bastante común usar 4px */
+    border-radius: 500px;
+}
+
+/* Elipse */
+.radio_porcentaje {
+    border-radius: 50%;
+}

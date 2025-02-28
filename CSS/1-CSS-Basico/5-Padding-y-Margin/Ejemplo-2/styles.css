@@ -1,0 +1,7 @@
+.box {
+    background: red;
+    height: 150px;
+    width: 150px;
+    /* Acá hay un margin colapse (los márgenes no se suman), ya que habrán elementos consecutivos donde el de arriba tendrá margin abajo, y el de abajo margin arriba. Para este caso debería ser 20px respecto al cuadrado del medio, pero esto es falso, css no funciona así, el margin se superpone dependiendo de cual es el más grande, y si son iguales se queda con el mismo, por lo tanto solo habrá 10px de distancia entre todas las cajas */
+    margin: 10px;
+}

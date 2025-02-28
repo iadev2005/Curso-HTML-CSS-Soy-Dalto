@@ -1,0 +1,28 @@
+.formulario {
+    background-color: red;
+    padding: 30px;
+}
+
+/* El formulario aumenta el padding con respecto a su contenido 10 píxeles, luego el contenido tienen padding también, así que el formulario también toma ese padding en cuenta cuando hace el suyo propio */
+
+/* Es importante saber que la propiedad padding esta acortada, como tal se puede dar padding a cualquier dirección con padding-dirección */
+
+/* Complementando lo anterior, las propiedades que tienen top, right, bottom y left, se pueden declarar de manera acortada, siguiendo un sistema de movimiento de agujas del reloj */
+
+.formulario_input {
+    /* padding: 10px 5px 2px 0; */
+    /* Ahora si solo ponemos dos valores estamos definiendo el padding vertivacal primero y luego el horizontal */ 
+    /* padding: 5px 10px; */
+    padding: 6px 10px;
+    width: 100%;
+    /* background: black;
+    color: red; */
+}
+
+.formulario_submit {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: red;
+    color: wheat;
+    width: 50%;
+}

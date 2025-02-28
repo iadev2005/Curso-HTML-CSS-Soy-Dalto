@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 280px;
+    background: #e2e2e2;
+    margin: auto;
+    margin-top: 30px;
+    /* Para darle sommbra a la caja */
+    /* box-shadow: cnt_pixeles_corridos_a_la_derecha (si es negativo hacía la izquierda), cnt_pixeles_corridos_hacia_abajo (si es negativo hacía arriba), desenfoque_sombra, expansión_sombra, color */
+    box-shadow: 0 0 40px 0 #0007;
+    padding: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #444;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #999;
+    letter-spacing: 5px;
+    font-weight: 100;
+    text-shadow:  0 0 1px #f88
+}
+
+p {
+    list-style: none;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 13px;
+    /* Para darle sombra al texto */
+    text-shadow: 0 0 5px #f88;
+}
+
+img {
+    width: 160px;
+    /* En caso de que la imagen sea un logo se recomienda lo siguiente */
+    filter: drop-shadow(0px 0px 15px #f88);
+}
+
