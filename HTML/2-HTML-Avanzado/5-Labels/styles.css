@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #ddd;
+    background-color: #333;
+}
+
+form {
+    background-color: transparent;
+    padding: 20px 0;
+    max-width: 500px;
+    margin: auto; 
+    box-shadow: 0 0 35px #fff2;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.form_input {
+    padding: 6px 20px;
+}
+
+input, textarea{
+    width: 100%;
+    /* Para que no haya un desbordamiento */
+    /* padding: 0;
+    margin: 0;
+    border: none; */
+    /* O, mucho mejor: */
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: none;
+    border: 1px solid #666;
+    box-shadow: 0 0 55px #0003;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #ddd;
+    /* margin-top: 4px; */
+}
+
+textarea {
+    min-width: 100%;
+    resize: none;
+    /* Particularmente al text area, hay que volver a asignar la tipografía, ya que por defecto trae otra */
+    font-family: sans-serif;
+    /* Si no queremos que se deslize basta con esto: */
+    /* resize: none; */
+    min-height: 102px;
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+label {
+    font-size: 0.9em;
+    /* Como es un elemento de línea no le podemos dar ni padding ni margin */
+    /* margin-bottom: 4px; */
+    /* padding-bottom: 4px; */
+    /* Podriamos modificar el margin top el input para solucionr esto, o hacer lo siguiente: */
+    line-height: 2;
+}
+
+.checkbox {
+    width: auto;
+    height: 10px;    
+}

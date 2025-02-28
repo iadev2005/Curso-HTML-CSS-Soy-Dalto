@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #ddd;
+    background-color: #333;
+}
+
+form {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto; 
+    box-shadow: 0 0 35px #fff2;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+input {
+    width: 100%;
+    /* Para que no haya un desbordamiento */
+    /* padding: 0;
+    margin: 0;
+    border: none; */
+    /* O, mucho mejor: */
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: none;
+    border: 1px solid #666;
+    box-shadow: 0 0 55px #0003;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #ddd;
+    /* margin-top: 4px; */
+    margin: 6px 0;
+}
+
+fieldset {
+    margin: 20px 0;
+    border: 1px solid #ddd6;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 6px;
+}

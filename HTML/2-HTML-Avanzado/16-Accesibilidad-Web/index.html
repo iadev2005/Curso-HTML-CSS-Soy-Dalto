@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="https://wallpapers.com/images/high/soccer-4k-mfmy2v6ymhkmpyjx.webp" alt="Messi">
+    <a href="index.htlm"> IR AL MENU</a>
+    <nav>
+        <ul>
+            <li>adasds</li>
+            <li>adasds</li>
+            <li>adasds</li>
+        </ul>
+    </nav>
+    <h2 aria-label="Título principal">TITULO</h2>
+    <!-- Toda página debería poder navegarse con la tecla TAB y enter, ese es el principio -->
+
+    <!-- La clave es hacer uso correcto de la semántica de HTML, usar los aria-label y los roles (consulta MDN), para consultar que elementos tienen y no tienen etiquetas especiales -->
+
+    <!-- También es recomendable ver el video de como hacer páginas web inclusivas de Dalto -->
+
+    <!-- En inspeccionar->lighthouse se hace una análisis automático para determinar la accesibilidad de la página -->
+
+    <!-- Como no hay semántica para slider hay que asignar ese rol -->
+    <div role=" slider" aria-valuenow="3" aria-valuemin="3" aria-valuemax="7">
+
+    </div>
+</body>
+</html>

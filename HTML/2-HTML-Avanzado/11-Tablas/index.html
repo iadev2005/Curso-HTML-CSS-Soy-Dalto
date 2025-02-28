@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <table>
+        <!-- tr arma filas, td celdas para esas filas, th cabazeras para las columnas de las filas -->
+        <!-- Para definir el encabzado se usa thead... -->
+        <thead>
+            <tr>
+                <th>Producto</td>
+                <th>Costo</td>
+                <th>Unidades</td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Banana</td>
+                <td>$3</td>
+                <td>1KG</td>
+            </tr>
+            <tr>
+                <td>Manzana</td>
+                <td>$2</td>
+                <td>1KG</td>
+            </tr>
+            <tr>
+                <td>Melon</td>
+                <td>$4</td>
+                <td>1LG</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <th class="header_total">Total</th>
+                <td class="dato_total" colspan="2">9$</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+</body>
+</html>

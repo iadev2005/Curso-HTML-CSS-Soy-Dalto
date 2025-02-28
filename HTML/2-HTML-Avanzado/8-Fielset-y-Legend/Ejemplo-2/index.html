@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset y Legend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <h2>
+            Formulario de contacto
+        </h2>
+        <fieldset>
+            <legend>INFORMACIÓN BÁSICA</legend>
+            <div class="form_input">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="John Doe">
+            </div>
+            <div class="form_input">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="ejemplo@gmail.com">
+            </div>
+            <div class="form_input">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" placeholder="ejemplo@gmail.com">
+            </div>
+        </fieldset>
+        
+        <!-- Select y Option -->
+        <div class="form_input">
+            <label>Tipo de usuario
+                <select name="type-of-user">
+                    <option value="user1">Seguidor/a</option>
+                    <option value="user2">Empresa</option>
+                    <option value="user3">Otros</option>
+                </select>
+            </label>
+        </div>
+        
+        <!-- Datalist y Option -->
+        <div class="form_input">
+            <label>Referente
+                <input list="referente" name="referente">
+                <datalist id="referente" name="type-of-user">
+                    <option value="user1">Soy Ignacio</option>
+                    <option value="user2">Una empresa</option>
+                    <option value="user3">Un amigo</option>
+                </datalist>
+            </label>
+        </div>
+        <!-- Es como un input, pero permite escribir más cantidad de texto -->
+        <div class="form_input">
+            <!-- Con el atributo readonly solo podríamos leer lo que hay en un textarea (los datos se enviarían al formulario) -->
+            <!-- disable desacticva la posibilidad de escribir en el textarea (los datos no se enviarían al formulario) -->
+            <!-- maxlenght da un máximo de carácteres ingresables -->
+            <!-- rows es para poner un máximo de líneas donde el usuario pueda escribir -->
+            <label for="textarea">Mensaje</label>
+            <textarea rows="8" id="textarea" placeholder="Dejá tu mensaje..."></textarea>
+        </div>
+        <div class="form_input">
+            <label for="checkbox">Acepto los términos y condiciones</label>
+            <input type="checkbox" class="checkbox" id="checkbox">
+        </div>
+    </form>
+</body>
+</html>
