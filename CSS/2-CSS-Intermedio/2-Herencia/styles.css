@@ -1,0 +1,23 @@
+/* Muchas de las porpiedades de un elemento padre sus hijos la heredan */
+
+/* Obvio que no todas las propiedades se heredan, por ejemplo ni width ni height se heredan */
+
+/* inherit es la propiedad que marca si se hereda por defecto o no */
+
+body {
+    color: blue;
+}
+
+div {
+    font-family: sans-serif;
+    width: 50%;
+}
+
+/* Si queremos que los hijos no hereden se da el valor initial, también esta unset, que, si el valor por defecto era inherit lo vuelve a inherit, pero si por defecto era otro lo deja en initial. Finalemente esta revert, que funciona semejante a unset, solo que buscará la configuraicón del navegador (que puso el usuario, por ejemplo un plugin) para hacer el cambio */
+
+/* inherit es muy útil para los inputs y para los enlaces */ 
+
+h1 {
+    color: initial;
+    font-family: initial;
+}

@@ -1,0 +1,47 @@
+/* Los pseudoelementos son aquellos que representan una parte específica de un elemento*/
+div {
+    padding: 20px;
+}
+
+/* Para acceder a ellos se usa ::c*/
+h1::first-letter {
+    color: red;
+    font-size: 3em;
+    letter-spacing: -8px;
+}
+
+.elemento3::first-line {
+    color: red;
+    font-weight: bold;
+}
+
+/* Bastante interesante, para darle estilo a la selección */
+div p::selection {
+    background-color: red;
+    color: #fff;
+}
+
+/* También se puede modificar los placeholder */
+input::placeholder {
+    color: green;
+    background-color: #000;
+}
+
+/* Para modificar las viñetas */
+li::marker {
+    color: red;
+}
+
+/* Es para poner algo antes del elemento (no es seleccionable) */
+li::before {
+    content: 'Antes ';
+    color: red;
+}
+
+/* Es para poner algo después del elemento (no es seleccionable) */
+li::after {
+    content: ' Después';
+    color: blue;
+}
+
+/* *  Este es el selector general las propiedades que alteremos aquí estarán en todos, se considera mala práctica */

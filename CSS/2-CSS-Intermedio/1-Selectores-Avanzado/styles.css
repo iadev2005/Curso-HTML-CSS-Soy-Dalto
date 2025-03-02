@@ -1,0 +1,62 @@
+li {
+    color: gray;
+}
+
+.ingrediente-faltante {
+    color: red;
+}
+
+.ingrediente-secreto {
+    color: blue;
+}
+
+/* Para seleccionar una imagen en específico */
+img[src="iadev.png"] {
+    width: 100%
+}
+
+/* Para seleccionar imágenes que terminan con algo en específico */
+img[src$="png"] {
+    width: 100%;
+}
+
+/* Para seleccionar imágenes que comienzan con algo en específico */
+img[src^="ia"] {
+    width: 100%;
+}
+
+/* Para darle estilo solo a los elementos que están dentro de otro (en este caso li dentro de ul) */
+ul li {
+    color: red;
+}
+
+/* Abuelo-> Padre -> Hijo */
+ul li em {
+    color: green;
+}
+
+/* Acá no se cambiará el color, ya que estamos poniendo la condición de que em debe ser hijo directo de ul */
+ul > em {
+    color: aqua;
+}
+
+/* Selector de hermano adyacente, seleccionar al siguiente después del indicado (no hijo ni nada de eso) */
+/*Esto le da estilo a un p que este después de un h1 */
+h1 + p {
+    color: blue;
+}
+
+/* Con esto sería un h1, que le sigue a un p, que termina en un p */
+h1 + p + p {
+    background-color: red;
+}
+
+/* Selector de hermanos generales, es lo mismo solo que selecciona a todos los siguientes */
+h1 ~ p {
+    color: fuchsia;
+}
+
+/* Si queremos darle estilo a dos elementos se usa una , */
+h1, p {
+    font-style: italic;
+}

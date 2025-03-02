@@ -1,0 +1,69 @@
+section .elemento1,
+section .elemento2,
+section .elemento3 {
+    color: red;
+}
+
+/* Pero hay una forma de hacerlo más fácil */
+section :is(.elemento1, .elemento2, .elemento3) {
+    color: blue;
+}
+
+/* where es lo mismo con menos especificidad (ya que no toma en cuenta la especificidad que nos da el elemento donde nos situamos) */
+section :where(.elemento1, .elemento2, .elemento3) {
+    color: blue;
+}
+
+/* has se le da al elemento padre, verifica que el elemento padre tenga algo */
+
+/*Acá se verifica que section tenga un elemento 1, si lo tiene pone un background GRIS (esto puede ser útil para evitas usar JS) */
+section:has(.elemento1) {
+    background-color: #ddd;
+}
+
+ul + span + div {
+    background-color: #000;
+}
+
+/* También si sabemos el siguiente elemento que sigue podemos modificar al antecesor */
+ul:has(+span) {
+    background-color: aqua;
+}
+
+/* Para cuando no esten dentro de algo */
+:is(h1,h2,h3,h3,h5,h6) {
+    color: green;
+}
+
+label {
+    font-weight: bold;
+}
+
+div {
+    padding: 20px;
+}
+
+/* Si quisieramos que le label se modifique dependiendo del input podemos hacer lo siguiente */
+label:has(input:invalid) {
+    color: red;
+}
+
+label:has(input:valid) {
+    color: green;
+}
+
+/* Para que el campo se muestre de su respectivo colo en vez de hacer esto: */
+
+/* input:valid {
+    color: green;
+}
+
+input:invalid {
+    color: red;
+} */
+
+/* Podemos hacer esto */
+
+input {
+    color: inherit;
+}

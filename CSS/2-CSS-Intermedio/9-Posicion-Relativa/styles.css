@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background-color: #ededed;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: #fff;
+    /* Ahora podemos desplazar el elemento por el body, y además será un punto de referencia para los elementos que estén dentro de el */
+
+    /* Las propiedades top, left, right, bottom es para estos casos donde se usa relative (o absolute). Esto ya que por defecto la position es static */
+
+    /* NOTA: La posición se mantiene, solo es un desplazamiento visual */
+    position: relative;
+}
+
+/* Para visualizar la tridimensionalidad podriamos ver a la zaja azul como el relleno de un sandwich, y la caja naranja como el pan (la caja 1 es el pan de abajo, y la caja 3 es el pan de arriba). Todas las cajas que vamos poniendo se irán colocando el la parte de arriba (como las pilas) */
+
+/* Una propiedad que manipula la tridimensionalidad es el z index */
+.box--blue {
+    background-color: blue;
+    top: 70px;
+    left: 20px;
+    /* El z index solo funciona si tenemos posicionados los elementos */
+    z-index: 1;
+}
+
+.box:first-child {
+    top: 150px;
+    left: 40px;
+    background-color: red;
+    z-index: 2;
+}
+

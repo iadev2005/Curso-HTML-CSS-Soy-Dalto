@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: #ddd;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #db7;
+    color: #fff;
+}
+
+
+.box--blue {
+    background-color: #48e;
+    position: absolute;
+    /* Ocupa su posición visualmente, pero es como si no estuviera allí, así que el siguiente elemento se pone por "debajo" de el, ya que piensa que es su lugar */
+    top: 20px;
+    left: 20px;
+    /* Le chupa un huevo todo y sale del container, ya que su punto de referencia (o relative) esta siendo la etiqueta html (la página) */
+
+    /* Ahora como le dimos possition relative al container se mueve respecto a el */
+
+    /* También vale la pena destacar que al dar esta propiedad la caja entre en un contexto de apilamiento diferente (como si tuviera más z-index) */
+}
+
+.box--red{
+    background-color: #f64;
+}
+
+.container {
+    border: 2px solid #000;
+    margin: 20px;
+    background: #fff;
+    position: relative;
+    /* Le damos position relative para que la caja azul se mueva respecto a el */
+}
+

@@ -1,0 +1,22 @@
+.list {
+    border: 2px solid #000;
+}
+
+.list__item {
+    color: grey;
+    margin: 10px 0;
+    list-style: square;
+}
+
+.item--harmful {
+    color: red;
+}
+
+.item--important {
+    color: blue;
+}
+
+.list--old {
+    opacity: 0.5;
+    background-color: #ccc;
+}

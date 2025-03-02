@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Block - Element - Modifier | Básicamente modificar estilos ya existentes para reutilizarlos -->
+    <!-- Además se suelen resolver problemas con la especificidad -->
+</head>
+<body>
+    <h1>INGREDIENTES</h1>
+    <!-- Los bloques se tienen que nombrar con la funcionalidad que tienen -->
+    <ul class="list">
+        <!-- Para nombrar elementos se suele poner el nombre del bloque seguido de dos guiones largos "__" y el nombre del elemento -->
+        <!-- La segunda clase que agreguemos será la clase modificadora (la que hace variaciones del molde). Esto poniendo el nombre del elemento seguido de dos guiones medios "--" y el nombre de la modificación que estamos haciendo -->
+        <li class="list__item item--harmful">SAL</li>
+        <li class="list__item">PAPA</li>
+        <li class="list__item item--important">HARINA</li>
+        <li class="list__item">AGUA</li>
+    </ul>
+
+    <!-- En este caso si quisieramos modificar el bloque (en vez de un item) repetimos el nombre del bloque seguido de dos guiones medios "--" y el nombre de la modificación -->
+    <ul class="list list--old">
+        <li class="list__item item--harmful">SAL</li>
+        <li class="list__item">PAPA</li>
+        <li class="list__item item--important">HARINA</li>
+        <li class="list__item">AGUA</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* la especificidad es una especie de valorador, que según lo que este mejor valorado elegirá esa opción para darle prioridad a ese estilo, resolviendo el conflicto */
+
+/* La cascada es un concepto que dice que el orden en el que le damos las propiedades a los elementos si importa */
+
+/* Si dos reglas tienen la misma especificidad lo que vamos a hacer para determinar el estilo dominante será verificar el orden */
+
+/* Mismo concepto, esto pasa porque (1,0,0) > (0,1,0) */
+#titulo {
+    color: green;
+}
+
+/* Esto es por que la especificidad del selector es (0,1,0), y las posiciones prioritarias son las primeras, entonces (0,1,0) > (0,0,1) */
+.title {
+    color: aqua;
+}
+
+h1 {
+    color: blue;
+}
+
+/* Y finalmente la que tiene más prioridad que todas, important */
+h1 {
+    color: red !important;
+}
+
+/* Combinando el important con la especifidad se ahcen propiedads aún más prioritarias */
+
+body h1 {
+    color: aqua !important;
+}

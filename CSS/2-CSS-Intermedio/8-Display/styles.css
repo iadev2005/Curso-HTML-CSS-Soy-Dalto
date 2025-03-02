@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div {
+    padding: 20px;
+    background-color: #999;
+}
+
+/* CARACTERISTICAS DE DISPLAY: BLOCK
+1.- Ocupa todo el ancho disponible
+2.- Como ocupa todo el ancho disponible comienza una nueva línea
+3.- Acepta margin y padding (a diferencia de los elementos display: in-line)
+
+/* Recordando que por defecto la propiedad display de "a" es en línea (in-line) */
+
+.enlace_prueba {
+    background-color: red;
+    color: #fff;
+    /* Pasaremos de esto: ENLACE ENLACE */
+    display: block;
+    /* A esto ENLACE
+    ----------ENLACE */
+    border: 1px solid #000;
+    margin: 20px;
+    padding: 20px;
+    opacity: 0.6;
+}
+
+/* Naturalmente, podemos hacer lo contrario, volver un elemento block en in-line, p es un elemento block */
+.prueba {
+    background-color: #000;
+    color: #fff;
+    /* Pasamos de esto Lorem
+    -------------------Lorem */
+    display: inline;
+    /* A estp Lorem Lorem */
+    /* Nota: El margin y el padding que aceptan los elementos inline es solamente horizontal */
+    margin: 0 5px;
+    padding: 0 20px;
+    /* Tampoco permite ni width ni height */
+    height: 100px;
+    /* Inline básicamente ajusta el tamaño al contenido de manera exclusiva */
+}
+
+.nav {
+    background-color: #48e;
+}
+
+.nav__list {
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item {
+    /* Si usamos ya sea inline, o block esto sería una chota */
+    /* display: inline; */
+
+    /* Para casos así usamos inline-block que básicamente es una combinación entre las dos */
+
+    /* SUPERIMPORTANTE */
+
+    /* display: inline-block */
+
+    /* Basicamente funcionan como bloques, pero ahora se pueden apilar, no ocupan una línea completa. Podemos trabajar elementos en bloque pero unidos:
+    |-------| |-------|
+    |       | |       | ...
+    | ------| |-------| */
+
+    /* display: inline */
+
+    /* --- --- --- */
+
+    /* display: block */
+
+    /* 
+    |-------| 
+    |       | 
+    | ------|
+
+    |-------| 
+    |       | 
+    | ------|
+        .
+        .
+        .
+    */
+    
+    display: inline-block;
+}
+
+.nav__link:hover {
+    background-color: #59e;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #48e;
+}
+
+.link--button {
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 4px 19px;
+    color: #48e;
+    border-radius: 3px;
+    margin-left: 60px;
+    /* Con display:none el elemento no ocupa espacio en la página (es como si no existiera) */
+}
+
+.link--button:hover {
+    background: transparent;
+    color: #fff;
+}

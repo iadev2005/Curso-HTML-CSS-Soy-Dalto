@@ -1,0 +1,104 @@
+/* Recomiendo buscar en la documentación MDN todas las pseudoclases */
+
+/* Selecciona al elemento raiz */
+/* :root {
+    color: #999;
+} */
+
+h1 {
+    color: #48e;
+    font-family: sans-serif;
+    margin: 30px;
+}
+
+/* Las pseudoclases a través de palabras claves nos permiten seleccionar un estado específico de un elemento */
+
+/* Para selecionar el h1 cuando el mouse este por encima */
+h1:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Cuando clickeamos h1 */
+h1:active {
+    background-color: #999;
+    color: #fff;
+}
+
+ul {
+    background-color: #999;
+    padding: 0;
+}
+
+/* Seleccionando el primer li */
+li:first-child {
+    color: #f00;
+}
+
+/* Seleccionando al tercer elemento del li */
+li:nth-child(3) {
+    color: #0f0;
+}
+
+/* Para seleccionar solo los pares */
+li:nth-child(2n) {
+    color: #000;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+/* Seleccionando al último elemento de li */
+li:last-child {
+    color: #00f;
+}
+
+/* Si queremos tener en cuenta todos los tipos (Como ese elemento interfiere no lo selecciona) */
+li:nth-of-type(2) {
+    color: brown;
+}
+
+/* Para excluir un elemento */
+.lista li:not(.excluir) {
+    color: #fff;
+}
+
+div {
+    border: 2px solid black;
+}
+
+/* Para cuando el elemento este vacío (Puede ser interesante con JS) */
+div:empty {
+    border: none;
+    background-color: #0f0;
+    padding: 30px;
+}
+
+/* En caso de que la checkbox no este marcada */
+input[type="checkbox"] {
+    margin: 50px;
+}
+
+/* En caso de que la checkbox este marcada */
+input[type="checkbox"]:checked {
+    margin: 0;
+}
+
+/* Seleccionando enlaces no visitados */
+a:link {
+    color: red;
+}
+
+/* Seleccionando enlaces no visitados */
+a:visited {
+    color: green;
+}
+
+/* En caso de que el email sea inválido */
+input:invalid {
+    color: red;
+}
+
+/* En caso de que el email sea válido */
+input:valid {
+    color: blue;
+}
