@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+.box {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 50px;
+    color: #000;
+    position: relative;
+    left: 0;
+    border: 2px solid #000;
+    /* Oculta lo que se sale del texto */
+    /* overflow: hidden; */
+    /* Coloca un scroll para poder bajar y ver el texto */
+    /* overflow: scroll; */
+    /* Para quitar el scroll que sobre (en este caso el de abajo) podemos hacer lo siguiente */
+    /* overflow-x: hidden; */
+    /* La forma más práctica es simplemente dándole un overflow-y desde el inicio */
+    /* overflow-y: scroll; */
+    /* La manera más simple de no tener que romperse la cabeza es con auto */
+    overflow: auto;
+}

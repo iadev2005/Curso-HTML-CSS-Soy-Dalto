@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMMET</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- EMMET es un plugin que nos facilita la creación de ciertos elementos tanto en HTML como en CSS -->
+    <!-- Un ejemplo, con ul>li creamos un ul que dentro tenga un li -->
+    <!-- En general si queremos meter elementos dentro de otros la sintaxis es elemento1>elemento2>elemento3>...-->
+    <ul>
+        <li></li>
+    </ul>
+    <!-- En este caso fue ul>li>a-->
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+    <!-- Ahora con el signo * creamos n cantidad de elementos, y la podemos combinar con la otra sintaxis -->
+    <!-- Ejemplo ul>li*5>a-->
+    <!-- NOTA: Hacer esto es equivalente a esto ul>(li>a)*5-->
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    <!-- Con el punto "." podemos dar clases, por ejemplo-->
+    <!-- ul.list>li.list__item*4>a.item__link-->
+    <!-- Si queremos que sea un id simplemente en vez del punto "." ponemos el hashtag "#" -->
+    <ul class="list">
+        <li class="list__item"><a href="" class="item__link"></a></li>
+        <li class="list__item"><a href="" class="item__link"></a></li>
+        <li class="list__item"><a href="" class="item__link"></a></li>
+        <li class="list__item"><a href="" class="item__link"></a></li>
+    </ul>
+    <!-- Podemos hacernos una nav de una página web -->
+    <!-- header>nav.navegation>ul.navegation__list>li.navegation__item*5>a.navegation__link -->
+    <header>
+        <nav class="navegation">
+            <ul class="navegation__list">
+                <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Para agregar contenido simplemente usamos llaves (esto agrega texto) -->
+    <!-- Ejemplo header.header>h1.header__title>nav.navegation>ul.navegation__list>li.navegation__item*5>a.navegation__link{Link} -->
+    <header class="header">
+        <h1 class="header__title">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"><a href="" class="navegation__link">Link</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link</a></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>
+
+    <!-- Si queremeos ennumerar del 1 hasta n simplemente usamos el signo $ -->
+    <!-- Ejemplo header.header>h1.header__title>nav.navegation>ul.navegation__list>li.navegation__item*5>a.navegation__link{Link $} -->
+    <header class="header">
+        <h1 class="header__title">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 1</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 2</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 3</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 4</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 5</a></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>
+
+    <!-- Para poner nuestros propios atributos (que no sean clase, ya que estas se ponen con ".") simplemente usamos ":" -->
+    <!-- Ejemplo script:src -->
+    <script src=""></script>
+
+    <!-- También podemos hacer un snippet (atajo) de esto, solo copiamos el comando, pulsamos ctrl+shift+p vamos a HTLM.json y lo modificamos -->
+    
+    <!-- Ahora nomás poniendo el fullheader se crea todo esto (che alto potencial tiene)-->
+    <header class="header">
+        <h1 class="header__title">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 1</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 2</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 3</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 4</a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link">Link 5</a></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>
+
+    <!-- Le hice otras modificaciones y ahora puedo poner la cantidad -->
+    <header class="header">
+        <h1 class="header__title">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                    <li class="navegation__item"></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>>a.navegation__link{Link $}
+
+    <!-- Puse otra modificación para que se ingrese el número se presione ENTER y este listo al toque, y quite lo de los nombres de los links -->
+    <header class="header">
+        <h1 class="header__title">
+            <nav class="navegation">
+                <ul class="navegation__list">
+                    <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                    <li class="navegation__item"><a href="" class="navegation__link"></a></li>
+                </ul>
+            </nav>
+        </h1>
+    </header>
+    <!-- NOTA: Presionando tab estando dentro de una etiqueta se salta a la siguiente etiqueta (que sea igual a la que estabamos) más próxima -->
+</body>
+</html>

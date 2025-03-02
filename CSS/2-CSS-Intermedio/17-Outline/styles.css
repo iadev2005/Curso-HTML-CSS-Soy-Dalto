@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+.box {
+    width: 150px;
+    background-color: #f00;
+    margin: auto;
+    margin-top: 50px;
+    border: 5px solid #000;
+    padding: 10px;
+    /* En el modelo de cajas esta entre el margin y el borde, como tal no ocupa espacio, solo es un efecto visual */
+    /* outline-width: 10px;
+    outline-color: blue;
+    outline-style: solid; */
+    /* offset define cuanto espacio se va a separar del borde */
+    /* outline-offset: 10px; */
+
+    /* Las propiedades anteriores se pueden acortar de la siguiente manera (igual que un borde) */
+    /* outline: 5px solid #00f; */
+}
+
+/* También podemos mezclarlo con un hover */
+.box:hover {
+    outline: 5px solid #00f;
+}
+
+input {
+    margin: 50px;
+    border: none;
+    border-top: 3px solid #000;
+    padding: 6px;
+}
+
+input:focus {
+    border-color: #00f;
+    color: #00f;
+    /* Esto no debería de hacerse por los problemas de accesibilidad */
+    /* outline: none; */ 
+}
+
+/* Para quitar ese borde que se subraya cuando seleccionamos al input */
+input:focus-visible {
+    outline: none;
+}

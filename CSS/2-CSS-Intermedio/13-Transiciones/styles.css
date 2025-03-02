@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    /* margin: auto; */
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    /* Definimos a lo que le vamos a hacer la transición */
+    transition-property: color;
+    /* Definimos cuánto tiempo queremos que dure */
+    transition-duration: 1s;
+    /* Podemos definir en cuánto tiepo arrancará la transición */
+    /* transition-delay: 2s; */
+    /* Podemos definir a todas las propiedades (aunque esto es una mala práctica) para hacerle la transición con: */
+    /* transition-property: all; */
+
+    /* También podemos seleccionar solo las propiedades que queremos transicionar */
+
+    transition-property: background-color, left;
+    position: relative;
+    left: 0;
+    /* Para cambiar la velocidad de animación se altera la propiedad transition-timing-function (por defecto es ease) */
+    transition-timing-function: cubic-bezier(.8,.18,.27,.83);
+
+    /* Si queremos simplificar podemos asignar todo lo relacionado con una transición de la siguiente manera */
+    transition: left 1s cubic-bezier(.8,.18,.27,.83) 2s;
+}
+
+/* Parq eu el efecto surga a partir de tocar la caja */
+/*.box:hover {
+    color: #fff;
+    background-color: blue;
+}*/
+
+/* Para que el efecto surga con el body */
+body:hover .box {
+    background-color: blue;
+    left: 400px;
+}

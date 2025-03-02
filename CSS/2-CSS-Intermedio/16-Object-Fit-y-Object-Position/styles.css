@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+    /* El valor por defecto es fill (se adapata, no mantiene la relación de aspecto) */
+    
+    /* El object-fit contain hace que se adapte a al menos una de nuestras dos dimensiones */
+    /* object-fit: contain; */
+    border: 2px solid #000;
+    margin-top: 50px;
+    margin-left: 50px;
+
+    /* El cover que se adapta recortándose */
+    /* object-fit: cover; */
+
+    /* Se fija en una posición */
+    /* object-position: center;*/
+
+    /* Con none mantiene sus dimensiones independientemente de lo que pase */
+    /* object-fit: none; */
+
+    /* Y finamente esta scale-down, que se queda con el valor más chico */
+    object-fit: scale-down;
+}

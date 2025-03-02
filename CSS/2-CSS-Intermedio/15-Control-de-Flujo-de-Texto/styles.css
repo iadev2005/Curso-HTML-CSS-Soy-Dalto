@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #bbb;
+}
+
+.box {
+    width: 240px;
+    height: 240px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border: 1px solid #0006;
+    /* Define como se comportan los esppacios en blanco y los saltos en línea (normal por defecto) */
+    /* nowrap quita los saltos de línea */
+    /* white-space: nowrap; */
+    /* pre básicamente detecta los saltos de línea que hicimos manualmente en el texto, como "HOLA
+    COMO
+    ESTAS", detectaría eso dos saltos de línea */
+    /* white-space: pre; **/
+    /* pre-wrap es lo mismo pero sin que se desborde */
+    /* white-space: pre-wrap; */
+
+    /* text-overflow es cuando haya desbordamiento (por defecto clip) */
+    /* Esta combinación es para los famosos 3 puntos suspensivos */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* word-brak (normalmente no se altera esta propiedad) es cuando las palabras es tan por cortarse, en ciertos idiomas no es conveniente que pase esto */
+
+    /* Para el coreano no es bueno que se corten las palabras para eso se usa esto */
+    /* word-break: keep-all; */
+
+    /* Esto detecta si la palabra se puede romper, y si se puede la rompe para abajo */
+    /* overflow-wrap: break-word; */
+
+    /* Lo mismo pero con palabras largas */
+    /* overflow-wrap: anywhere; */
+
+    /* Evita viudas y huerfanos (palabras que quedan solas, ya sea arriba o abajo) */
+    text-wrap: pretty;
+}
+
+/* Esto es para balancear las palabras de manera estética (es bastante útil) */
+h1 {
+    text-wrap: balance;
+}
+
+/* Lo más importante es esto:
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+y esto:
+    text-wrap: balance;
+    text-wrap: pretty;
+*/

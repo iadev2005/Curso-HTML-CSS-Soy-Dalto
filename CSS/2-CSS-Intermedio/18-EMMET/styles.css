@@ -1,0 +1,17 @@
+/* EMMET en CSS */
+header {
+    /* Para las medidas */
+    /* Por ejemplo margin: 10, se pondría m10, es decir la incial de la propiedad seguido de la cantidad y unidad (px por defecto) */
+    /* margin: 10px; */
+    /* p -> porcentaje
+    e -> em
+    */
+    /* Si quisieramos un margin de 10px 10px, tendriamos que hacer lo siguiente m10-10 */
+    /* margin: 10px 10px; */
+    /* Combinando las propiepadades anteriores podrimaos hacer un margin de 10px con 10em con m10-10e*/
+    /* margin: 10px 10em; */
+    /* También podemos usarlo para los colores con: */
+    /* c#(color) */
+    color: #000; /* c#0 */
+    /* Tambien podriamo predefinir estilos en el .json de css */
+}

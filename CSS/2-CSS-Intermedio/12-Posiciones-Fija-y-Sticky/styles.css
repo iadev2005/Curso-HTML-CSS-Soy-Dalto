@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box-fixed {
+    height: 60px;
+    width: 200px;
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-right: 0;
+    box-shadow: 0 0 40px #0009;
+}
+
+.box-sticky {
+    box-sizing: border-box;
+    height: 60px;
+    width: 200px;
+    background-color: #f00;
+    position: sticky;
+    /* Si no se la da ninguna propiedad relacionada con la posición después del sticky se comporta como relative */
+    top: 100px;
+    /* Ahora como le dimos esta propiedad le estamoss diciendo que cuando llegué al top 20px quede fija */
+}
+
+
+.box-sticky:first-child {
+    top: 30px;
+}
+
+.box-sticky:last-child {
+    top: 170px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
