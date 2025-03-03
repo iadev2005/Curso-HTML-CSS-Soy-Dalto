@@ -1,0 +1,30 @@
+/* Es un módulo de CSS, que se encarga de ajustar los contenidos de las cajas para que sean dinámicos. En otras palabras, que las cajas sean flexibles */
+
+/* Las propiedades que da flex no son para la caja en si, sino, para los elementos que están dentro de la caja (incluso si son otra caja) */
+
+/* Flexbox es unidireccional y unidimensional (a diferencia de grid), es decir solo es mueve en una dirección y solo abarca una dimensión */
+
+/* ROW mueve los elementos en fila (de izquierda a derecha) */
+/* ROW Reverse es lo mismo pero en dirección opuesta */
+
+/* COLUMN va de arriba hacia abajo */
+/* COLUMN es lo mismo pero en dirección opuesta */
+
+/* Hay dos ejes, el MAIN AXIS (por defecto) va de izquierda a derecha y el CROSS AXIS va de arriba hacia abajo. Todo esto en caso de ser ROW
+    |
+    | CROSS AXIS ---------> MAIN AXIS
+    |
+    v
+Todo lo contrario si es COLUMN
+    |
+    | MAIN AXIS ---------> CROSS AXIS
+    |
+    v
+NOTA: Main axis es el eje principal, y Cross axis es el eje que lo corta
+*/
+
+/* Con flexbox es muy fácil situar en una parte de nuestro contenedor a cualquier elemento que este contenido */
+
+/* Con gap podemos separar a todos los elementos entre sí (Que estan dentro de la caja flexbox */
+
+/* A la caja contenedora le decimos flex-box y a los items que la conforman flex-items */

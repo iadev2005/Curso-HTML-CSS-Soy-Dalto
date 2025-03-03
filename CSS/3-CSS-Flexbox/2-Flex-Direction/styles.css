@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flexbox {
+    /* Se alinean los elementos (y son flexibles) */
+    display: flex;
+    /* Por defecto los elementos se alinean en fila (izquierda a derecha) */
+    flex-direction: row;
+    /* Podemos cambiar la dirección con row-reverse */
+    /* flex-direction: row-reverse; */
+    /* Con column los elementos se posicionan de arriba hacia abajo */
+    /* flex-direction: column; */
+    /* Con column-reverse los elementos van de abajo hacia arriba */
+    /* flex-direction: column-reverse; */
+    /* Para definir que es inicio y que es final (esto suele pasar mucho dependiendo de la región) se usa direction, ltr es left to right (izquierda a derecha), rtl es right to left (derecha a izquierda), es nuestra región esta predefinido como izquierda a derecha */
+    /* Con esta configuración si ponemos 123 saldría 321 */
+    /* direction: rtl; */
+}
+
+.flex-item {
+    /* Si definimos un alto y un ancho el elemento se ajusta según esto, el elemento jamás se agrandará más de estas medidas */
+    width: 180px;
+    /* height: 60px; */
+
+    /* Los items vienen configurados a que, si no tienen tamaño ocupen todo el cross axis */
+
+    /* Con el padding no sucede esto, el elemento no se ajustará según su padding, sino, por su ancho, alto y contenido */
+    /* padding: 60px; */
+    background-color: #800;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.flex-item:first-child{
+    background-color: #f77;
+}
+
+.flex-item:last-child{
+    background-color: #000;
+}

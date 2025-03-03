@@ -1,0 +1,138 @@
+body, div, header, nav, ul, h1 ,h2 ,p, img {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #f80;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    text-wrap: balance;
+}
+
+/* HEADER SECTION */
+
+.header {
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url("header.png");
+    background-size: cover;
+    display: flex;
+}
+
+.header__overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f809;
+    position: absolute;
+    /* El z index por defecto es 0 */
+}
+
+.header__item--container {
+    position: relative;
+    z-index: 1;
+    /* Como el padre es flexbox con margin auto centramos */
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.header__item--container p {
+    text-wrap: pretty;
+}
+
+.header__img {
+    min-width: 250px;
+    max-width: 40%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    margin: 20px;
+}
+
+/* NAVBAR SECTION */
+.nav {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px #0006;
+}
+
+.nav__ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav__item {
+    /* display: inline-block; */
+    list-style: none;
+}
+
+.nav__ul--container{
+    flex-grow: 4;
+    text-align: center;
+}
+
+.nav__logo--container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav__link {
+    color: #f80;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 10px;
+    border-radius: 0;
+    transition: background-color 0.3s, border-radius 0.25s, outline 0.3s, outline-offset 0.3s;
+    margin: 2px;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.nav__link:hover {
+    background-color: #f803;
+    border-radius: 20px; 
+    outline: 2px solid #f806;
+    outline-offset: -7px;
+}
+
+.link--login {
+    background-color: #f80;
+    color: #fff;
+    border-radius: 20px; 
+    padding: 8px 24px;
+    margin-left: 6px;
+}
+
+.link--login:hover {
+    background-color: #b61;
+    outline: none;
+}
+
+.nav__logo {
+    width: 70px;
+}
+
+/* MAIN SECTION */
+main {
+    max-width: 800px;
+    margin: auto;
+    font-size: 30px;
+    text-wrap: pretty;
+}

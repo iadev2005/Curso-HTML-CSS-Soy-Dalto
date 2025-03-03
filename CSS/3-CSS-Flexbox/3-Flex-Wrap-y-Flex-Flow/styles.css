@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    /* flex-direction: row; */
+    /* Si queremos que algún elemento se ponga abajo (para evitar que se achique), cambiamos el valor de la propiedad flex-wrap (por defecto esta en no-wrap) a wrap */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    /* Con column es la misma chota solo que te lo manda a la primera posición de la columna derecha */
+    /* flex-direction: column; */
+    /* height: 100vh; */
+    /* flex-flow nos permite abreviar las propiedades flex-direction y flex-wrap */
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.flex-item {
+    width: 180px;
+    background-color: #800;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.flex-item:first-child{
+    background-color: #f77;
+}
+
+.flex-item:last-child{
+    background-color: #000;
+}

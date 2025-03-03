@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    margin: 20px;
+    /* Tener en cuenta que todo lo que se va a explicar es respecto al contenedor */
+    /* justify-content alinea los items en el eje principal, el valor por defecto es start ( arranca en el incio en este caso en la izquierda, ya que es row) */
+    /* justify-content: start; */
+    /* end alínea los items al final (en este caso derecha, ya que es row */
+    /* justify-content: end; */
+    /* center nos permite alinear items en el centro, en este caso como el eje principal es horizontal sería el centro horizontal */
+    /* justify-content: center; */
+    /* space-between coloca al primer elemento al inicio, al último en el final, y todo el resto en el centro */
+    /* justify-content: space-between; */
+    /* space-around hace que cada elemento tenga una separación igual (cada elemento tendrá x margen, y todos los demás tendrán también ese x margen), el problema principal con esta asignación es que los margenes entre elementos entre sí suele superponerse */
+    /* justify-content: space-around; */
+    /* Si queremos lo mismo, pero sin que los márgenes se superpongan se usa space-evenly (Esta copado esto), ,ismo espacio entre elementos y bordes */
+    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+
+    /* Para alinear los elementos en el eje cruzado se altera la propiedad align-items */
+    
+    /* Por defecto la propiedad align-items tiene el valor stretch, básicamente, los items se estiran para rellenar al contenedor. Si los items no tuvieran un tamaño definido, rellenarian al contenedor por esta propiedad */
+    /* align-items: stretch; */
+
+    /* start niega lo anterior y le da a los items su tamaño definido (no rellena), inclusive en el caso donde no se le dieron dimensiones a los items tampoco rellena */
+    /* align-items: start; */
+
+    /* end los posiciona al final */
+    /* align-items: end; */
+
+    /* center los posiciona en el centro */
+    /* align-items: center; */
+
+    /* baseline los items se alinean, según la línea base del texto (se nota más cuando el primer elemento es más grande que los otros), es como si pusiera una línea imaginaria inferior en el elemento más grande de esa línea y todos los demás en esa sección estan sobre ella */
+    /* align-items: baseline; */
+
+    /* SUPERIMPORTANTE: 
+    Para una línea basta con trabajar con justify-items, para más de una se recomienda usar justify-items y align-content. Ya que el align es para el eje cruzado
+    */
+
+    /* Para que quede más claro justify es como el excel, solo justifica, y align es para alinear (lo que sea), cada uno puede trabajar con content (eje principal) y con items (eje cruzado), sabiend usar las combinaciones entre ambas es que se llegan a resultados interesantes */
+}
+
+.flex-item {
+    width: 100px;
+    height: 50px;
+    background-color: #800;
+    /* margin: 10px; */
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.flex-item:first-child{
+    background-color: #f77;
+    /* height: 70px;
+    font-size: 50px; */
+}
+
+.flex-item:last-child{
+    background-color: #000;
+    /* height: 100px;
+    font-size: 80px; */
+}
+
+/* Técnica copada para centrar un elemento */
+.center {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+
+.center-item {
+    margin: auto;
+}
+
+.seccion {
+    width: 100vw;
+    background-color: #0009;
+    display: flex;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #f77;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container__element {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+}

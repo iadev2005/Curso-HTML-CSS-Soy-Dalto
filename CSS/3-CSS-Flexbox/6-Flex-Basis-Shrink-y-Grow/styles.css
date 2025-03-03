@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #dfd6c9;
+}
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    margin: 50px 10px auto 10px;
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    /* Como solo tenemos una línea de elementos */
+    align-items: center;
+    border: 2px solid #0009;
+    background-color: #fff;
+    /* Con gap separamos a todos los elementos entre sí x píxeles */
+    gap: 5px;
+}
+
+.flexbox--row {
+    flex-flow: row wrap;
+}
+
+.flexbox--column {
+    flex-flow: column wrap;
+}
+
+
+/* Las propiedades Basis, Shrink y Grow son solo para los hijos directos de los flexbox */
+.flexbox__item {
+    background-color: #800;
+    color: #fff;
+    /* height: 100px; */
+    width: 200px; 
+    height: 50px;
+    border: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10px 0; */
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #0009;
+    box-shadow: 2px 2px 2px 1px #0009;
+    /* Damos los espacios disponibles repartidos entre los elementos que están dentro del flexbox (hijos directos) */
+    /* flex-grow: 1; */
+    /* Che esto es interesante para hacer diseños piolas */
+
+    /* Con shrink 0 le estamos diciendo que los elementos no se achiquen (si esta wrap pasamelos abajo, pero no me los achiques */
+    /* flex-shrink: 0; */
+
+    /* Con shrink 1 le estamos diciendo que se puede encoger, que no hay pedo (1 es como la capacidad que tiene de encogerse */
+    /* flex-shrink: 1; */
+
+    /* Finalmente tenemos a flex-basis, que por defecto esta en automático, combina el caso donde el felxbox tenga la propiedad wrap, y queramos achicar los elementos */
+    /* flex-basis: auto; */
+
+    /* Si le damos 0, los elementos ocupan el espacio mínimo posible */
+    /* flex-basis: 0; */
+
+    /* Podemos darle medidas con sus unidades respectivas */
+    /* flex-basis: 50px; */
+
+    /* SUPERIMPORTANTE: En los flex-item no se usa ni width ni height, se usa flex basis para definir las dimensiones de los elementos, eso es lo correcto */
+
+    /* Entonces para que los elementos se pueden achicar, e irse desplazando a la siguiente fila, todo de manera dinámica se usan lo siguiente que esta re-copado: */
+    /* flex-basis: 150px;
+    flex-grow: 1; */
+
+    /* Si estamos en row flex-basis funciona como un min width, si estamos en column flex-basis funciona como min height */
+
+    /* Lo recomendable es usar un: flex-basis: 0 y también un min-width: (de algo) */
+
+    /* También podemos usar un atajo, recordando que basis por defecto es auto, shrink es 1, y grow es 0 */
+
+    /* flex: grow shrink auto;
+    Que por defecto es:
+    flex: 0 1 auto */
+
+    flex: 1 1 100px;
+}
+
+.flexbox__item:nth-child(2n) {
+    background-color: #f77;
+    /* Ocupa todo el espacio disponible (ignora sus propias dimensiones y trata de extenderse por todo el espacio disponible) */
+    /* flex-grow: 1; */
+    /* Si le damos un valor más alto que sus hermanos ocupará el doble de espacio que ellos usan */
+    /* flex-grow: 2; */
+
+    /* Acá podemos decirle, che, vos encogete 3 veces más que tus hermanos */
+
+    /* Entonces si le damos shrink 0 de cierta manera podemos decir que lo que estamos haciendo es decirle, che, tu no tienes capacidad para encogerte */
+    /* flex-shrink: 3; */
+    /* flex-grow: 2; */
+}
+
+.flexbox__item:last-child {
+    background-color: #000;
+    /* flex-grow: 4; */
+}

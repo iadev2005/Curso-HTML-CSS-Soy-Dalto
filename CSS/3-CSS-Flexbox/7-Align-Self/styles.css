@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #dfd6c9;
+}
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    margin: 50px 10px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0009;
+    background-color: #fff;
+    gap: 5px;
+    height: 300px;
+}
+
+.flexbox--row {
+    flex-flow: row wrap;
+}
+
+/* .flexbox--column {
+    flex-flow: column wrap;
+} */
+
+
+.flexbox__item {
+    background-color: #800;
+    color: #fff;
+    width: 200px; 
+    height: 50px;
+    border: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #0009;
+    box-shadow: 2px 2px 2px 1px #0009;
+
+    flex: 1 1 100px;
+}
+
+.flexbox__item:nth-child(2n) {
+    background-color: #f77;
+}
+
+.flexbox__item:last-child {
+    background-color: #000;
+}
+
+/* Para usar align-self el flexbox debe tener un tamaño definido y debe tener align-items, align-self es la misma poronga que hemos visto hasta ahora pero para un elemento específico (deah se re-tilteaba xd) */
+.flexbox__item:nth-child(5) {
+    align-self:baseline;
+}
