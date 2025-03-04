@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}

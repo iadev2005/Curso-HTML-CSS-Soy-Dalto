@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+/* Se adapta al 100% de la pantalla desde el dispositivo que se este viendo. si la imagen es más chica que ese 100%, pues se muestra más chica y todo piola */
+img {
+    max-width: 100%;
+    height: auto;
+    /* margin: auto; */
+}
+
+/* Forma antigua de adaptar un vídeo */
+/* .container {
+    position: relative;
+    max-width: 100%;
+    padding-top: 56.25%;
+    height: 0;
+} */
+
+/* video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+} */
+
+/* Forma moderna de adaptar un vídeo */
+.container {
+    max-width: 100%;
+    /* Esto es lo mismo que padding-top: 56.25% */
+    aspect-ratio: 16/9;
+    margin: auto;
+}
+
+video {
+    max-width: 100%;
+}

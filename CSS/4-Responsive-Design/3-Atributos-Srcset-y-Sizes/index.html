@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Srcset y Sizes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NOTA: La calidad es una verga porque la imagen original era de 261x261, esto solo es demostrativo -->
+    <img src="dalto-360x360.png" srcset="dalto-360x360.png 400w, dalto-600x600.png 600w, dalto-900x900.png 1000w" sizes="(max-width: 400px) 360px, (max-width: 600px) 600px 900px">
+
+    <!-- En sizes le decimos, mira, en pantallas con más de 400px pone imágenes de 360px, si la pantalla tiene más de 600px pone imágenes de 600px, y si tiene más de 600px pone imágenes de 900px -->
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Nunca es recomendable dar medidas absolutas, de hecho si se puede solo es recomendable dar una medida (el width normalmente) para que el contenedor se adapte al contenido. En dado caso si se tuviera que definir las medidas, lo recomendable es trabajar con rangos de mínimo a máximo (o solo uno de los dos) esto para simplificar el responsive-design */
+.bloque {
+    display: inline-block;
+    min-width: 150px;
+    /* max-width: 200px; */
+    background-color: #7bf;
+    margin: auto;
+    width: 100%;
+    /* flex-grow: 1;
+    flex-basis: 0; */
+    /* O lo que es equivalente */
+    flex: 1;
+    font-size: 12px;
+    padding: 10px;
+    margin: 4px;
+}
