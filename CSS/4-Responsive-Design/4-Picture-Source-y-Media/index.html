@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture, Source y Media</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Picture es una etiqueta que funciona para especificar múltiples para una imagen -->
+    <!-- Se recomienda usar esta etiqueta siempre que haya una imagen presumiblemente más grande que alguna resolución -->
+    <picture>
+        <!-- En general siempre es recomendable cargar las imágenes en formato webp, así que le podemos decir al navegador que priorize esa carga -->
+        <source type="image/webp" srcset="dalto-900x900.webp">
+        <source media="(max-width: 400px)" srcset="dalto-360-360.png">
+        <source media="
+        (max-width: 600px)" srcset="dalto-600x600.png">
+        <img src="dalto-900x900.png">
+    </picture>
+    <!-- Con media es la misma chota por cierto -->
+</body>
+</html>

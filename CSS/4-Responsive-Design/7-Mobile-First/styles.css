@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+div ,body, nav, ul, footer {
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.main-wrapper, header, footer {
+    width: 100%;
+}
+
+h1, h2 , h3, h4 {
+    text-wrap: balance; 
+}
+
+p {
+    text-wrap: pretty;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #48e;
+}
+
+/* .header__navigation {
+    background-color: #48e;
+} */
+
+.header__navigation-list {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header__navigation-item {
+    list-style: none;
+    margin: 4px;
+}
+
+.header__navigation-link {
+    color: #fff;
+    display: inline-block;
+    padding: 6px 9px;
+}
+
+aside, main {
+    padding: 10px 60px;
+    /* Para visualizar */
+    /* border: 1px solid #000; */
+    flex-basis: 0;
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+main {
+    min-width: 300px;
+    flex-grow: 2s;
+}
+
+/* MAIN SECTION */
+
+.main-wrapper {
+    display: flex;
+    flex-grow: 1;
+    max-width: 1024px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* text-align: center; */
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.main-wrapper__aside {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main-wrapper__aside-navigation {
+    /* Suele ser correcto trabajar con unidades relativas */
+    min-width: 10rem;
+    text-align: center;
+}
+
+.main-wrapper__aside-navigation-list {
+    padding: 0;
+}
+
+.main-wrapper__aside-navigation-item {
+    list-style: none;
+}
+
+.main-wrapper__aside-navigation-link {
+    color: #48e;
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+.main-wrapper__aside-navigation-link:hover {
+    opacity: 0.7;
+}
+
+aside:last-child {
+    min-width: 10rem;
+    display: none;
+
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    border: 1px solid #000;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    .main-wrapper {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    aside:last-child {
+        display: block;
+    }
+}

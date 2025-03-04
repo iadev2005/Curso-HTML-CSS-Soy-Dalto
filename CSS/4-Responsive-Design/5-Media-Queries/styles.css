@@ -1,0 +1,49 @@
+/* Las Media Queries nos permiten adaptar el contenido de nuestra web, según las dismensiones del dispositivo, la sintaxis básica es la siguiente: */
+
+/* NOTA: not y only son operadores opcionales. not es para los dispositivos que no cumplen esas condiciones, y only es solo si lo puede adaptar (en caso de que el navegador sea antiguo) */
+
+/* mediatype indica el tipo de medio donde queremos que se realize la consulta, por ejemplo, si queremos que se imprima algo usamos print y si queremeos medir la pantalla de nuestra pc usamos screen. También tenemos el and que lo podemos uar para combinar varias expresiones en una consulta */
+
+/* Finalmente tenemos expressions que evalua las dimensiones de nuestro teléfono, orientación, etc. */
+
+/* @media not|only mediatype and (expressions) {
+        CSS-Code;
+    } 
+*/
+
+/* Para alterar la impresión (dispositivos de impresión) */
+@media print {
+    body {
+        font-size: 24pt;
+    }
+}
+
+/* Que sea una pantalla (sin condiciones adicionales) */
+/* @media screen {
+    body {
+        font-size: 20px;
+    }
+} */
+
+.flexbox {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.flexbox__item {
+    background-color: #ccc;
+    padding: 30px;
+    border: 1px solid #f00;
+    flex-grow: 1;
+    /* Pero si quisieramos hacerlo de otra forma, usariamos las Media Queries */
+    /* flex-basis: 0;
+    min-width: 300px; */
+}
+
+/* Si es una pantalla y tiene 500px o menos */
+@media screen and (max-width:500px) {
+    /* Ahora cuando tiene menos de 500px se pone en columna */
+    .flexbox {
+        flex-direction: column;
+    }
+}

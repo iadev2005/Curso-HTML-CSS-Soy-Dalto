@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Es una verificación para asegurar que el navegador soporta una funcionalidad */
+@supports (color: oklch(30% 0.2 30)) {
+    body {
+        color: oklch(30% 0.2 30)
+    }
+}
+
+/* En caso de que no lo soporte */
+@supports not (color: oklch(30% 0.2 30)) {
+    body {
+        color: brown
+    }
+}
+
+/* Por lo general esto se suele trabajr si una parte esencial del diseño no la soporta el navegador */

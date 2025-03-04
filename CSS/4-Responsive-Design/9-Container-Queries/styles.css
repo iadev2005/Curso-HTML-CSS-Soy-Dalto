@@ -1,0 +1,26 @@
+/* En vez de tomar, por ejemplo una pantalla, podemos seleccionar un container y dependiendo de sus características hacer un responsive design */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    /* En este caso vamos a condicionar al contenedor porm su ancho (size sería para ambas dimensiones) */
+    /* El valor por defecto de la propiedad es normal */
+    container-type: inline-size;
+    container-name: main;
+}
+
+p {
+    font-style: 8px;
+}
+
+/* Esto es solo para el contenedor name */
+@container main (max-width: 600px) {
+    p {
+        font-size: 20px;
+        color: #fff;
+        background-color: #000;
+    }
+}
