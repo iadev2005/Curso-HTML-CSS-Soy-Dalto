@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 80vh;
+    grid-template-rows: repeat(3,200px);
+    grid-template-columns: repeat(3,200px);
+    /* Si no le cambiamos el valor a grid-auto-rows, las filas que no definimos (que no definimos sus dimensiones) tratarán de rellenar el grid */
+
+    /* grid-auto-rows define que las filas implícitas (las que no se definieron) tendrán un tamaño (en este caso alto) de n px */
+    grid-auto-rows: 80px; 
+
+    /* Es importante destacar que como siempre se crean filas automáticamente lo que solemos usar es auto-rows, no auto-colums */
+
+    /* claro esto lo podemos cambiar con grid auto-flow, podemos hacer que lo se cree en vez de ser una nueva fila sea una columna */
+    grid-auto-flow: column;
+    /* Ahora si vale la pena definir un auto-columns (ancho) */
+    grid-auto-columns: 100px;
+}
+
+.grid-item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-style: 30px;
+    color: #fff;
+}

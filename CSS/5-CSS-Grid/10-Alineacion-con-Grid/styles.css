@@ -1,0 +1,64 @@
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,50px);
+    gap: 10px;
+    padding: 10px;
+    /* Por defecto justify-items tiene el valor de stretch que rellena la celda completa */
+    /* justify-items: stretch; */
+    /* start lo pone en el inicio de su propia celda y end en el final */
+    /* justify-items: start; */
+    /* Tanto para right, left y center aplica lo mismo, lo pone en la posición indicada de su celda */
+    /* right y left derecha e izquierda respectivamente */
+    /* Y center que te lo pone en el medio */
+    /* justify-items: center; */
+    /* Ya alineamos los items en el centro, ahora estamos llevando el contenido (lo que la contiene, o para que quede más claro las celdas) al centro */
+    /* Acá aplica también lo de space-around, space-between y space-evenly */
+    /* justify-content: center; */
+
+    justify-items: stretch;
+    justify-content: space-evenly;
+
+    /* Resumiendo:
+    justify-items: Movemos en el eje principal (en este caso horizontal) al hijo dentro de su celda
+    justify-content: Movemos en el eje principal (en este caso horizontal) la celda misma en el contenedor
+    */
+
+    /* align-items funciona igual que justify-items, solo que en este caso vertical
+    align-content funciona igual que justify-content, solo que en este caso vertical */
+
+    /* align-items: start; */
+    align-content: space-evenly;
+
+    border: 2px solid #000;
+    margin: 20px;
+    height: 350px;
+}
+
+.grid-item:first-child {
+    /* El self hace referencia a si mismo, así puede distinguirse de sus hermanos */
+    /* justify-self: center; */
+    background-color: #e66;
+    /* align-self: flex-end; */
+}
+
+.grid-item {
+    background-color: #48e;
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+    color: #fff;
+    /* Por los momentos nos quedaremos con esta forma de centrar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}

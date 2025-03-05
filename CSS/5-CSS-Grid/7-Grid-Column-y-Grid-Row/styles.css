@@ -1,0 +1,63 @@
+
+/* Las Grid Row Line son aqullas que se ubican entre las filas del grid (incluyendo el borde con los extremos), y las Grid Column Line son lo mismo pero entre las columnas (incluyendo el borde con los extremos) */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #999;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.grid-item {
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+    background-color: #48e;
+}
+
+.grid-item:first-child {
+    /* Por se el primer elemento */
+    /* En ambos casos empiezan siendo auto */
+    grid-column-start: 1;
+    grid-row-start: 1;
+    /* Para el end es auto por defecto */
+    /* grid-column-end: 2; */
+    /* grid-row-end: 2; */
+    /* Entonces podemos agrandar esa celda en particular indicándole donde comienza y donde termina */
+    grid-column-end: 3;
+    /* Para que no se vaya a la mrd hay dos opciones */
+    /* 1era */
+    /* object-fit: cover; */
+    /* height: 100%; */
+    /* 2da */
+    grid-row-end: 3;
+
+    /* Si surgieron algunos problemas tiene que ver con que usamos imágenes directamente, en general eso no se trabja así, primero se ponen div's y luego las imágenes dentro */
+
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/995/169/179/messi-images-for-desktop-background-wallpaper-preview.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* Si queremos que adelante ya sea filas o columnaas usamos la palabra span */
+    /* grid-row-start: span 2; */
+
+    /* SI queremos usar un ataja podemos usar ya sea grid column o grid row, donde la sintaxis es grid-direccion: inicio/final */
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}

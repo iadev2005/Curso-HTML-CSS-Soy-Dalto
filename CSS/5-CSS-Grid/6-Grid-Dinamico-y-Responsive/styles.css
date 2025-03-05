@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #999;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    /* auto-fit ajusta, y auto-fill rellena */
+    display: grid;
+    /* Si el segundo parámetro solo es un valor, auto-fit y auto-fill funcionan igual */
+    /* grid-template-columns: repeat(auto-fit,100px); */
+    /* grid-template-columns: repeat(auto-fill,100px); */
+    /* Si mezclamos auto-fit con minmax, va estirando hasta que sienta que sea necesario añadir otra columna más */
+    /* grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); */
+    /* Si hay muchos elementos no se nota la diferencia entre auto-fit y auto-fill */
+    /* Si hay pocos elementos se ve la diferencia, auto-fit va rellenando con el espacio disponible poniendo el contenido (no solo la celda), y auto-fit no, auto-fit solo va poniendo la celda el ancho del contenido queda definido por minmax) */
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    /* grid-template-rows: repeat(3,100px); */
+    grid-auto-rows: 1fr;
+    /* con auto-fit y flow en row, va adaptando columnas automáticamente */
+    /* es raro usar auto-fit, ah no ser que se quiera mostrar texto o algo así, lo común es usar auto-fill */
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.grid-item {
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}
+
+/* @media screen and (max-width:500px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    }
+} */

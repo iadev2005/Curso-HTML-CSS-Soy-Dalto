@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid {
+    /* Por defecto los hijos se ponen sobre una sola columna con múltiples filas conformadas por ellos mismos */
+    display: grid;
+    /* Si simplemente definimos al contenedor como grid, cada hijo pasa a ser una fila implícita */
+    /* En grid no aplica el concepto de margin-collapse, por lo tanto se van sumando */
+
+    /* Para señalarle a la grilla el tamaño (ancho) de las columnas que la conforman y cantidad de columnas usamos grid-template-columns: tamaño_columna1 tamaño_columna2 ...  */
+    grid-template-columns: 60px 200px 400px;
+
+    /* Al igual que flexbox podemos cambiar la dirección con direction */
+    /* direction: rtl; */
+
+    /* Para señalarle a la grilla el tamaño (alto) de las filas que la conforman usamos grid-template-rows: tamaño_fila1 tamaño_fila2 ...  */
+    grid-template-rows: 100px 200px;
+}
+
+.grid-item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-style: 30px;
+    color: #fff;
+}

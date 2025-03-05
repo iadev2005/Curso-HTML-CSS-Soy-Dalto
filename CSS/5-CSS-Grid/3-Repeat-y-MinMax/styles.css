@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 80vh;
+
+    /* Repeat */
+
+    /* Para simplificar todo esto podemos usar repeat */
+    /* podemos ponerle otras columnas al lado del repeat, por ejemplo 200px repeat(3,1fr) 100px */
+    /* repeat(cantidad_repeticiones, lo_que_se_repite) */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /* Bueno pero supongamos que hay un patrón, por ejemplo este: */
+    /* 1fr 2fr 1fr 2fr 1fr 2fr */
+
+    /* Podemos simplificar esto de la siguiente manera */
+    /* grid-template-columns: repeat(3,1fr 2fr); */
+
+    /* MinMax */
+    /* Básicamente se achica hasta un punto y se agranda hasta otro */
+    /* grid-template-columns: 200px 100px minmax(300px, 700px); */
+
+    /* Si queremos repetir varias veces el mimax podemos hacerlo con el repeat */
+    /* grid-template-columns: repeat(4,minmax(100px, 300px)); */
+
+    /* Aplica para filas también */
+    grid-template-rows: repeat(2,200px);
+
+    grid-template-columns: repeat(2,200px);
+
+    /* Los grid-item se adaptan al tamaño de grid-container, esto si el grid-container tiene un tamaño definido, si no lo tiene, ¿Cómo podríamos hacer que sea adapten esos elementos que no definimos?, bueno con grid implícito */
+
+
+
+    /* grid-template-rows: 300px 200px; */
+}
+
+.grid-item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-style: 30px;
+    color: #fff;
+}

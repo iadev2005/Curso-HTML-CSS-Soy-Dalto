@@ -1,0 +1,62 @@
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-evenly;
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.grid-item:first-child {
+    /* background-color: #e66; */
+    /* Arranca en fila n, columna n, y se agranda n filas y n columnas */
+    grid-area: 3/1/span 2/span 2;
+    display: grid;
+    /* Esto de aca lo podemos reemplazar ppor subgrid */
+    /* grid-template-columns: repeat(2,1fr); */
+    /* grid-template-rows: repeat(2,1fr); */
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    gap: 10px;
+    padding: 0;
+    background: transparent;
+
+}
+
+.subgrid-item {
+    background-color: #e66;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.subgrid-item:first-child {
+    order: 2;
+    background-color: #4a4;
+    width: 200px;
+}
+
+.grid-item {
+    background-color: #48e;
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}

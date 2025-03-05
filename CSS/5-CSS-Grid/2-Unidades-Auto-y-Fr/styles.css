@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 80vh;
+    /* Unidad Auto */
+    /* El grid agrandará esa celda para ocupar todo el ancho, no el contenido, solo la celda */
+    /* grid-template-columns: auto 200px 300px; */
+    /* El contenido se repartirá en partes iguales (los que tengan auto), aunque claro esto depende del contenido de sus respectivas cajas. El espacio se reparte calculando el espacio libre que dejarian las cajas si tuvieran la propiedad min-content */
+    /* grid-template-columns: auto auto 300px; */
+    /* grid-template-rows: auto auto; */
+
+    /* Unidad fr (ocupan x fracción del grid total) */
+    /* Es bastante semejante a flex-grow */
+    grid-template-columns: 4fr 2fr 3fr;
+    grid-template-rows: auto auto;
+
+    /* Por lo general se usa más fr que auto*/
+}
+
+.grid-item {
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-style: 30px;
+    color: #fff;
+}

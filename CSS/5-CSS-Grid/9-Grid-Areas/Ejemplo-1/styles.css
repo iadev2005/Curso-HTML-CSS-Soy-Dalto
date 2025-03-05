@@ -1,0 +1,37 @@
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    /* Para evitar los huecos en blanco en vez de usar row usaremos dense */
+    /* grid-auto-flow: row; */
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.grid-item {
+    background-color: #48e;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 16px;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/995/169/179/messi-images-for-desktop-background-wallpaper-preview.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(10) {
+    /* grid-column: span 3; */
+    /* grid-row: span 2; */
+    /* En vez de esto podemos usar grid area */
+    /* Donde el primer parámetro son las filas que usará, y el segundo las columnas */
+    grid-area: span 2 / span 3;
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}

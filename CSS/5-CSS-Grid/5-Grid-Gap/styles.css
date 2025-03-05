@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #999;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,150px);
+    grid-auto-rows: 150px; 
+    grid-auto-flow: row;
+    grid-auto-columns: 100px;
+    border: 3px solid #000;
+    /* Para evitar el margin collapse se usa el column-gap en combinación del row-gap */
+    /* Esto esta piola, ya que solo separa los elementos entre sí, no el contenedor */
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    /* Aunque usando el shortcut gap nos ahorramos trabajo */
+    gap: 10px;
+    /* Podemos ponerle dos valores, el primero representa el vertical, y el segundo horizontal */
+    /* gap: 25px 5px */
+    /* Si queremos que también hay la misma distancia con los bordes, simplemente usamos el mismo padding que usamos en el gap */
+    padding: 10px;
+    width: 90vw;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.grid-item {
+    background-color: #48e;
+    padding: 10px;
+    font-style: 30px;
+    color: #fff;
+}
+
+@media screen and (max-width:400px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
