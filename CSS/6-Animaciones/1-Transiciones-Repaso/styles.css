@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family:'Montserrat';
+    background-color: #ccc;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 20px;
+    background-color: #fff;
+    padding: 6px;
+    border: 4px solid #48e;
+    border-radius: 39px;
+    transition: border .6s steps(6);
+}
+
+.barra {
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 10%;
+    /* transition: width 2s linear; */
+    /* Si queremos lograr el típico efecto de las barritas usamos steps */
+    /* transition: width 2s steps(10); */
+    /* Podemos mezclarlo con colores también */
+    transition: width .6s steps(6), background-color .6s steps(6);
+}
+
+.barra:active {
+    width: 100%;
+    transition-duration: 3s;
+    background-color: #f33;
+}
+
+/* Selecciona la caja si la barra esta activa */
+.box:has(.barra:active) {
+    border: 4px solid;
+    background-color: #f33;
+    transition-duration: 3s;
+}
+
+/* Para la accesibilidad (no tener tantas animaciones) */
+@media (prefers-reduced-motion: reduce) {
+    .barra, .box {
+        animation: none;
+        transition: none;
+    }
+}

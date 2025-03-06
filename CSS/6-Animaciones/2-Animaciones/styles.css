@@ -1,0 +1,83 @@
+/* Sintaxis de animaciones */
+/* En from están todas las propiedades del elemento cuando inicio la animación. Y en el to toda las propiedades del elemento cuando termina la animación */
+/*
+@keyframe nombre {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family:'Montserrat';
+    background-color: #ccc;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 20px;
+    background-color: #fff;
+    padding: 6px;
+    border: 4px solid #48e;
+    border-radius: 39px;
+    height: 20vh;
+}
+
+.barra {
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 10%;
+    /* Para que una animación funcione se necesitan mínimo 2 propiedades, el nombre y la duración */
+    /* Le tenemos que indicar al elemento que va a tener una animación */
+    animation-name: llenar-barra;
+    animation-duration: 2s;
+    /* Si queremos que la animación tarde más en iniciar usamos animation-delay */
+    animation-delay: 1s;
+    /* Para que la animación quede en su estado final o inicial usamos animation-fill-mode */
+    /* estado inicial (por defecto) */
+    /* animation-fill-mode: backwards; */
+
+    /* Hay dos maneras que quede en el estado final, con forwards (considera el estado inicial del elemento pra luego pasar a from) */
+    /* animation-fill-mode: forwards; */
+
+    /* Y both, que directamente arranca en el estado from (básicamente agarra las propiedades del from y se las pasa al elemento) */
+    animation-fill-mode: both;
+
+    animation-timing-function: linear;
+    /* Para que la animación se reproduzca más de una vez usamos animation iteration count */
+    /* animation-iteration-count: infinite; */
+
+    /* Si queremos que la animación se reproduzca en reversa usamos */
+    /* animation-direction: reverse; */
+
+    /* También la podemos alternar (también podemos ponerle alternate reverse para que la animación sea de fin a principio) */
+    animation-direction: alternate;
+    
+    /* Si queremos pausar la animación */
+    /* animation-play-state: paused; */
+}
+
+.barra:active {
+    animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
+    from {
+        width: 0%;
+        background-color: #f33;
+    }
+    to {
+        width: 100%;
+        background-color: #48e;
+    }
+}

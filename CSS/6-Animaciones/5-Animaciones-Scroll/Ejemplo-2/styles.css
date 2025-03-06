@@ -1,0 +1,33 @@
+body {
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.crecedor {
+    height: 100vh;
+}
+
+.box {
+    /* Definimos el nombre y eje */
+    view-timeline: --cajita block;
+    background-color: #48e;
+    padding: 20px;
+    animation: llenar-barra;
+    /* Si no definimos un nombre */
+    /* animation-timeline: view(); */
+    animation-timeline: --cajita;
+    animation-timing-function: linear;
+}
+
+@keyframes llenar-barra {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        background-color: #f33;
+    }
+}

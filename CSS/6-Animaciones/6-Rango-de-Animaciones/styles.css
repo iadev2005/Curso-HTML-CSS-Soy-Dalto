@@ -1,0 +1,48 @@
+body {
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.crecedor {
+    height: 100vh;
+}
+
+/* Si quisieramos que la animación apareciera en otro momento lo que podemos hacer es */
+.box {
+    height: 400px;
+    view-timeline: --cajita block;
+    background-color: #48e;
+    padding: 20px;
+    animation: llenar-barra both;
+    animation-timeline: --cajita;
+    animation-timing-function: linear;
+    /* Cuando le falto un 20% para terminar el view se muestra la animación */
+    /* animation-range-start: cover 20%; */
+
+    /* NOTA: El valor por defecto de ambas propiedades es normal */
+
+    /* Arrancas cuando llevemos el 50% del view */
+    /* animation-range-start: cover 50%; */
+    /* Terminas cuando lleves el 80% del view */
+    /* animation-range-end: cover 80%; */
+
+    /* En vez de cover podemos usar contain, si es en start el navegador primero espera que se carge el 1000% del view del elemento para luego ejecutar la animación, y si es en end el navegador espera que toque la parte superior de la página para finalizar */
+
+    animation-range-start: cover 0%;
+    animation-range-end: contain 50%;
+}
+
+@keyframes llenar-barra {
+    from {
+        /* width: 0%; */
+        opacity: 0;
+    }
+    to {
+        /* width: 100%;
+        background-color: #f33; */
+        opacity: 1;
+    }
+}

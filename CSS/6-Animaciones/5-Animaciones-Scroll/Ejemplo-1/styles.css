@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family:'Montserrat';
+    background-color: #ccc;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.increaser {
+    height: 200vh;
+}
+
+.container {
+    height: 50vh;
+    /* Definimos el nombre del scroll y los ejes */
+    /* scroll-timeline-name: --body; */
+    /* Eje horizontal */
+    /* scroll-timeline-axis: inline; */
+    /* Eje vertical */
+    /* scroll-timeline-axis: block; */
+
+    /* También podemos usar un shortcut */
+    scroll-timeline: --containerScroll block;
+    overflow-y: scroll;
+}
+
+.box {
+    background-color: #fff;
+    padding: 6px;
+    border: 4px solid #48e;
+    border-radius: 39px;
+    position: fixed;
+    width: 100%;
+}
+
+.barra {
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 10%;
+    animation-name: llenar-barra;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    /* Animaremos la barra a medida que baje el scroll */
+    /* 1era Forma */
+    /* Esto si queremos que funcione con el body directamente */
+    /* animation-timeline: scroll(); */
+    /* También le podemos llamar por su nombre previamente definido */
+    animation-timeline: --containerScroll;
+}
+
+.barra:active {
+    animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        background-color: #f33;
+    }
+}
