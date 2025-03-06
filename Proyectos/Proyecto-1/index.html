@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div class="prueba">
+        <img src="logo.png">
+    </div> -->
+    <header class="header">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="logo.png">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#profile">About</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="profile" id="profile">
+        <div class="profile__wrapper">
+            <div class="profile__img-container">
+                <img src="messi.png" class="profile__img">
+            </div>
+            <div class="profile__data-container">
+                <div class="profile__data">
+                    <div class="profile__description">
+                        <h1>¿Quién es Lionel Messi?</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum facere sunt nam quasi laboriosam at accusamus ut temporibus. Distinctio vero delectus odio in explicabo inventore quam laudantium accusamus doloremque.</p>
+                    </div>
+                    <div class="profile__skill-container">
+                        <h2>SKILLS</h2>
+                        <ul>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--80">80%</div>
+                                </div>
+                                <span class="profile__skill-name">HTML</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--60">60%</div>
+                                </div>
+                                <span class="profile__skill-name">CSS</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--70">70%</div>
+                                </div>
+                                <span class="profile__skill-name">JS</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--70">70%</div>
+                                </div>
+                                <span class="profile__skill-name">PYTHON</span>
+                            </li>
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--90">90%</div>
+                                </div>
+                                <span class="profile__skill-name">SQL</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <section class="portfolio" id="portfolio">
+        <h2 class="portfolio__title">PORFOLIO SECTION</h2>
+        <div class="portfolio__project-container">
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+        </div>
+    </section>
+    <section class="form" id="contact">
+        <h2 class="form__title">CONTACT</h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label> Name
+                    <input type="text" placeholder="John Doe">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label> Last Name
+                    <input type="text" placeholder="Doe">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label> E-mail
+                    <input type="email" placeholder="mail@example.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label> Message
+                    <textarea placeholder="Your message"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+                <input type="submit">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <strong>ADA 13</strong> - Copyright
+    </footer>
+</body>
+</html>
