@@ -1,0 +1,44 @@
+/* Min, Max y Clamp van comparando 3 valores, y según esto se quedan con el valor mínimo, máximo o ideal */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.box {
+    background-color: #48e;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    margin: 120px auto;
+    font-size: 30px;
+    padding: 0 40px;
+
+    /* Ojo tanto min como max aceptan n de parámetros, aunque lo ideal son dos valores */
+    
+    /* min nos devuelve el valor más pequeño */
+    /* Si vamos achicando la pantalla en algún momento el 100% será más pequeño que los 900px, es decir se va adaptando */
+    /* width: min(900px, 100%); */
+
+    /* max es lo mismo, solo que siempre se quedará con el más grande */
+    /* Si vamos achicando la pantalla en algún momento los 900px seran más grande que el 100%, es decir se va adaptando */
+    /* width: max(900px, 100%); */
+
+    /* Hoy en día no se usa ni min ni max, hoy en día se usa clamp */
+    /* clamp(v_min, v_ideal, v_max) */
+    /* width: clamp(800px, 100%, 1600px); */
+
+    /* Es muy recomendable usar clamp con el font-size */
+    font-size: clamp(2.4rem, 2.2vw, 4rem);
+    /* Esto es una manera simplificada de acortar min-width y max-width */
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}

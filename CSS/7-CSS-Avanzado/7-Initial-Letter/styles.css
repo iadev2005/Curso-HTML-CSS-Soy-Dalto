@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 3px solid #000;
+    /* width: 100vw; */
+}
+
+p::first-letter {
+    /* Primero define cuantas lineas va a ocupar (hacia arriba), y el segundo valor es desde que línea se va a ocupar */
+    initial-letter: 2 1;
+    padding: 2px;
+    padding-bottom: 0;
+    color: #f44;
+    font-family: Arial;
+}

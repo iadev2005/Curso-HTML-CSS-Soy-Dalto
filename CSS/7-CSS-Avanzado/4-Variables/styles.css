@@ -1,0 +1,64 @@
+/* Supongamos que queremos definir un color principal y uno secundario para nuestra web, bueno lo ideal seria trabajar con variables */
+
+/* Una opción para hacer variables globales es declarándolas en el root */
+
+:root {
+    --color-global: #48e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 20px;
+    /* Si definimos la variable acá todo lo que este dentro de body tendrá acceso a la variable */
+    /* --color-primary: #f44; */
+    /* Y bueno supongamos que hicimos esta asignación, podríamos re-asignar el color en box, a uno azul y así todos los hijos de box cada vez que usen la variable serian de color azul */
+
+    /* Además, también podemos hacer operaciones aritméticas con las variables (por ejemplo, definimos un tamño y en cierto momento lo queremos agrandar, bueno simplemente lo multiplicamos por 2 con calc(var(--tamano-principal)*2) y se lo asignamos a la variable respectiva */
+}
+
+.box {
+    --color-primary: #f44;
+    background-color: var(--color-primary);
+    display: grid;
+    place-content: center;
+    color: #fff;
+    margin: 120px auto;
+    font-size: 30px;
+    padding: 0 40px;
+    font-size: clamp(2.4rem, 2.2vw, 4rem);
+}
+
+/* Supongamos que no tienen nada que ver */
+.box:nth-child(2) {
+    border: 2px solid var(--color-primary);
+    background-color: #fff;
+}
+
+.box:nth-child(3) {
+    color: var(--color-primary);
+    background-color: var(--color-ejemplo);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
+
+body > p {
+    /* No funcionará ya que esa variable solo existe para la clase box y sus hijos*/
+    color: var(--color-primary);
+    font-size: 60px;
+}
+
+/* Otra forma potente de usar variables (globales) es la siguiente (recomiendo consultar la documentación oficial): */
+/* Este módulo combinado con JS lleva al máximo a CSS */
+@property --color-ejemplo {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #3438;
+}

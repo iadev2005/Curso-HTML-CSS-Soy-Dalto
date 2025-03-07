@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+    width: 50vw;
+    height: 100vh;
+    overflow: auto;
+    /* Modifica la intensidad del scroll, por defecto viene en scroll, smooth es más suave */
+    scroll-behavior: smooth;
+    /* Con esto le damos primero color a la barra, y segundo al fondo de la barra */
+    /* Debe haber contraste para accesibilidad */
+    scrollbar-color: #48e #fff;
+    /* Para cambiar el ancho (none hace que se vea invisible, auto es el por defecto y thin lo vuelve más finito) */
+    /* thin no se recomienda por accesibilidad */
+    scrollbar-width: thin;
+}
+
+.crecer {
+    height: 200vh;
+}

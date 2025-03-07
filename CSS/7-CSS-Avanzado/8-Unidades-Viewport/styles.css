@@ -1,0 +1,6 @@
+/* dvh trabaja para que el elemento siempre este centrado, independientemente si el menú con la url de la página del celular se extiende y acapara un espacio, o no se extienda y no lo acapare, al ser una unidad dinámica esta preparada para ambos casos */
+
+/* Siempre usar dvh, no vh, siempre es más conveniente. La única excepción es que sea un navegador antiguo (También en el width con dvw) */
+.caja {
+    height: 100dvh;
+}

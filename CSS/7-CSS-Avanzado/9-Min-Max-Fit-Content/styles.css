@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wrapper {
+    margin: 30px 0;
+    border: 1px solid #000;
+}
+
+/* ----- GRID ----- */
+
+.grid-container {
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+}
+
+.grid-item {
+    min-height: 100px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 2px solid #000;
+}
+
+.grid-item:first-child {
+    background-color: #48e;
+}
+
+.grid-item:nth-child(2){
+    background-color: #f33;
+}
+
+.grid-item:nth-child(3){
+    background-color: palevioletred;
+}
+
+.grid-item:nth-child(4){
+    background-color: greenyellow;
+}
+
+/* ----- min-content ----- */
+
+/* Nos permite calcular el mínimo contenido que se puede dar en el grid item, por ejemplo, calcula la palabra mas larga de un párrafo y según eso coloca el ancho de la caja o también puede ser si tenemos una imagen con un min-width o min-height, se adapta el mínimo tamaña que pueda tomar la caja.
+*/
+
+/* Como consectetur es la palabra más larga, es la que define el ancho mínimo de la caja */
+
+.grid-container--min {
+    grid-template-columns: 1fr min-content min-content;
+}
+
+/* ----- max-content ----- */
+
+/* Se adapta al máximo tamaño que pueda tener el contenido, por ejemplo la manera más larga de poner un párrafo sería ponerlo todo en una línea, ese sería el max content. En el caso de que tengamos un imagen con un max-width o max-height, trata de adaptarse a ese tamaño máximo. */
+
+/* En este caso la columna 2 tiene un max-content, lo que hace es tomar todo el párrafo y colocarlo en una linea, tratando de adaptarse al máximo contenido */
+
+.grid-container--max {
+    grid-template-columns: 1fr max-content 1fr;
+}
+
+/* ----- fit-content ----- */
+
+/* Este método ocupa los dos conceptos anteriores, la sintaxis nos permite pasarle un valor como parámetro a este método, con esto podemos definir el valor máximo al que llega el elemento y como mínimo toma el min-content. */
+
+/* Entonces si lo alargamos nuestra caja como mucho llega a 400px, y si la tratamos de achicar solo podremos hasta el min-content, en este caso el min-content lo determina la palabra Laudantium (esto es muy responsive) */
+
+.grid-container--fit {
+    grid-template-columns: 150px fit-content(400px) 150px;
+}
+
+
+
+
+
+

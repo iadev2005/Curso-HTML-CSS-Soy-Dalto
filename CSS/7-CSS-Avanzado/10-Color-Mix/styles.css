@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.box {
+    font-size: 25px;
+    border: 2px solid #000;
+    /* Com mínimo el min-content, como máximo el max-content */
+    width: fit-content;
+    padding: 200px;
+    /* Lo primero que nos pide color-mix es el método que usaremos para el color, segundo el color y un porcentaje, tercero otro color con su respectivo porcentaje */
+    /* Y bueno mezcla los dos colores */
+    /* Esto esta re bueno para la opacidad */
+    background-color: color-mix(in srgb, #48e 100%,  #fff 30%);
+
+}

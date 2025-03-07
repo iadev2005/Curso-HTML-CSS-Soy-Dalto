@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --alto-box: 200px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    background-color: #48e;
+    color: #fff;
+    /* margin: 60px auto; */
+    padding: 0 40px;
+    font-size: clamp(2.4rem, 2.2vw, 4rem);
+    border: 6px solid #000;
+    /* Función calc (podemos sumar unidades diferentes) */
+    /* Podemos sumar, restar, multiplicar y dividir */
+    /* width: calc(60% + 200px); */
+}
+
+.box:first-child {
+    /* height: 200px; */
+    height: var(--alto-box);
+}
+
+.box:nth-child(2) {
+    height: calc(100vh - var(--alto-box));
+    overflow: auto;
+}

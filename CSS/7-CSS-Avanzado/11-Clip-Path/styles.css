@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    max-width: 100%;
+    /* Otra forma copada de hacer un círculo */
+    /* El punto de referencia a partir del cual se traza la circunferencia (en base a la imagen) esta determinado por el desplazamiento en x e y */
+    /* circle(porcentaje_donde_llega_para_trazar_circunferencia at desplazamiento_eje_x desplazamiento_eje_y */
+    /* clip-path: circle(50%); */
+    /* clip-path: circle(100% at 0px 0px); */
+
+    /* También podemos ahcer elipses, donde el primer parámetro es la distancia del centro al borde y la distancia del centro al alto */
+
+    /* clip-path: ellipse(50% 30% at 50% 50%); */
+
+    /* Y trabajando con un generador podemos hacer cualquier polígono */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    /* border: 10px solid #f44; */
+}

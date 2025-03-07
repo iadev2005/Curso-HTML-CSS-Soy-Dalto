@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.box {
+    margin: auto;
+    padding: 20px 50px;
+    /* background-color: #48e; */
+    /* blur desenfoca la caja y a los elementos hijos (si se lo damos a la imagen obviamente desenfocamos solo a la imagen */
+    /* filter: blur(5px); */
+
+    /* brightness modifica el brillo */
+    /* filter: brightness(0.5); */
+
+    /* contraste modifica el contraste */
+    /* filter: contrast(3); */
+
+    /* grayscale modifica la escala a grises */
+    /* filter: grayscale(1); */
+
+    /* saturate modifica la saturación */
+    /* filter: saturate(2); */
+
+    /* hue-rotate cambia la paleta de colores de la imagen */
+    /* filter: hue-rotate(50deg); */
+
+    /* backdrop actua como una capa de ajuste (solo el fondo), donde se puede aplicar cualquier efecto usado anteriormente */
+    backdrop-filter: contrast(3);
+
+    /* también solo para filter podemos usar opacity, pero sería al recontra pedo ya que existe el opacity sencillo */
+    /* filter: opacity(); */
+
+    /* invert que invierte los colores */
+    filter: invert();
+
+
+    /* también tenemos filter scroll y filter view, pero esas ya las usamos */
+
+    /* finalmente tenemos a filter sepia (un filtro de instagram bien random xd) */
+    filter: sepia();
+
+    /* tambien podemos usar varios filtros de una, filter: filtro1 filtro2 ... Ojo los filtros se aplican según el orde que les dimos */
+
+    position: absolute;
+}
+
+img {
+    /* filter: drop-shadow(0 0 15px #000); */
+    /* filter: blur(10px); */
+    max-width: 100%;
+    object-fit: cover;
+}

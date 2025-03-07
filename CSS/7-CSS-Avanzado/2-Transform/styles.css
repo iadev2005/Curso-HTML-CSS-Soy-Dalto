@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #48e;
+}
+
+.box:first-child {
+    /* rotate rota la caja */
+    /* transform: rotate(20deg); */
+    /* también podemos usar rotate directamente */
+    /* rotate: 20deg; */
+    rotate: 0deg;
+    transition: rotate 1s;
+}
+
+
+
+
+.box:first-child:hover {
+    rotate: 360deg;
+}
+
+.box {
+    margin: auto;
+    padding: 20px 50px;
+    border: 4px solid #000;
+    width: fit-content;
+    /* skew "gira" la caja podemos trabjar si queremos solo en x o y con skewx o skewy*/
+    /* transform: skew(20deg); */
+    /* Se translada x unidades, funciona tanto para x como para y, con translateX y translateY */
+    /* transform: translate(300px); */
+    /* Podemos usar translate directamente */
+    translate: 30px;
+}
