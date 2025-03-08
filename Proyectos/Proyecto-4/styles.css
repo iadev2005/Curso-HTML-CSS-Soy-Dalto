@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: "Montserrat";
+    --bg-color: color-mix(in srgb, #f62 70%, #fff);
+    --chat-bg-color: #fff;
+    --dark-color: #f62;
+    background-color: var(--bg-color);
+}
+
+.chat {
+    max-width: clamp(300px, 70%, 900px);
+    background-color: var(--chat-bg-color);
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px #0003;
+}
+
+.chat__user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.chat__user img {
+    max-width: 2.4rem;
+    border-radius: 50%;
+    margin: 4px;
+}
+
+.chat__content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    background-color: var(--bg-color);
+    color: #fff;
+    font-size: .6rem;
+    padding: 7px;
+    border-radius: 9px 9px 9px 0;
+    position: relative;
+    z-index: 10;
+    max-width: clamp(300px, 70%, 600px);
+    margin: 6px;
+    width: fit-content;
+}
+
+.msg::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--bg-color);
+    bottom: -3px;
+    left: -4px;
+    clip-path: polygon(43% 0, 0% 100%, 100% 68%);
+    z-index: -1;
+}
+
+.self {
+    background-color: var(--dark-color);
+    margin-left: auto;
+    border-radius: 9px 9px 0 9px;
+}
+
+.self::before {
+    background-color: var(--dark-color);
+    clip-path: polygon(57% 0%, 100% 100%, 0% 68%);
+    bottom: -3px;
+    left: auto;
+    right: -4px;
+}

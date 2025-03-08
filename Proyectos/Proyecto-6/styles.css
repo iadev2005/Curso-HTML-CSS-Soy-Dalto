@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: "Montserrat";
+    --bg-color: #ff9464;
+    --card-bg-color: #fff9;
+    --dark-color: #f62;
+    /* background-color: var(--bg-color); */
+    /* background-image: linear-gradient(#0008, #0008), url("https://images.unsplash.com/photo-1585170236738-aadfce97f025?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    background-image: linear-gradient(#0008, #0008), url("img/fondo.gif");
+    height: 200dvh;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+
+.text-container {
+    min-height: 100dvh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: clamp(1rem, 9dvw, 12rem);
+    color: #444;
+    font-weight: 600;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 2dvw;
+    animation: aparecer-texto both;
+    animation-timeline: scroll();
+    animation-range-start: cover 20%;
+}
+
+.left-text {
+    color: var(--card-bg-color);
+    padding-left: 4dvw;
+}
+
+.left-text div {
+    filter: drop-shadow(0 0 4px #000) drop-shadow(0 0 4px #fff);
+}
+
+img {
+    /* mix-blend-mode: screen; */
+    /* mix-blend-mode: darken; */
+    /* mix-blend-mode: lighten; */
+    /* mix-blend-mode: multiply; */
+    /* mix-blend-mode: saturation; */
+    filter: grayscale();
+    mix-blend-mode: lighten;
+    position: fixed;
+    top: 0;
+    animation: aparecer  both;
+    animation-timeline: scroll();
+    max-height: 100dvh;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0.0;
+        filter: grayscale() drop-shadow(0 0 15px #0006);
+        translate: 0 -20%;
+        scale: .7;
+    }
+    100% {
+        opacity: 1;
+        filter: grayscale() drop-shadow(0 0 15px #0006);
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+@keyframes aparecer-texto {
+    0% {
+        opacity: 0.0;
+        translate: 0 20%;
+        scale: 2;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text-container {
+        justify-content: space-evenly;
+    }
+}

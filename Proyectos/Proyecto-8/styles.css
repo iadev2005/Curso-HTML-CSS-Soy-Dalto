@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body, div, ul, li, a, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: "Montserrat";
+    --bg-color: #ffb18c;
+    --text-color: #333;
+    --faq-color: #fff;
+    --dark-color: rgb(255, 130, 77);
+    background-color: var(--bg-color);
+}
+
+.faq {
+    margin: auto;
+}
+
+.faq__option{
+    background-color: var(--faq-color);
+    margin: 7px;
+    padding: 7px;
+    max-height: 34px;
+    overflow: hidden;
+    display: block;
+    transition: max-height .5s;
+}
+
+.faq__option:has(input[type="checkbox"]:checked) {
+    max-height: 150px;
+    transition: max-height 1.5s;
+}
+
+.faq__option:has(input[type="checkbox"]:checked) .content {
+    animation: aparecer 1s both;
+}
+
+.faq__ask {
+    user-select: none;
+    position: relative;
+}
+
+.content {
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+.faq__ask::marker {
+    content: '';
+}
+
+.faq__ask::before {
+    content: '+';
+    color: var(--bg-color);
+    position: absolute;
+    right: 0;
+    font-weight: 900;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.faq__option:has(input[type="checkbox"]:checked) .faq__ask::before {
+    content: '-';
+}
+
+.faq__option b {
+    background-color: var(--dark-color);
+    padding: 2px 4px;
+    color: var(--faq-color);
+    margin-right: 4px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        translate: 0 -20px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+        border-top: 1px solid var(--bg-color);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .faq {
+        max-width: clamp(300px, 70%, 700px);
+        margin: 40px auto;
+    }
+}
